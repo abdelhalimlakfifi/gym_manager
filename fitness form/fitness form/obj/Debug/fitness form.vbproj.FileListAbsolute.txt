@@ -1,0 +1,10 @@
+c:\users\kakuzu\documents\visual studio 2012\Projects\fitness form\fitness form\bin\Debug\fitness form.exe.config
+c:\users\kakuzu\documents\visual studio 2012\Projects\fitness form\fitness form\bin\Debug\fitness form.exe
+c:\users\kakuzu\documents\visual studio 2012\Projects\fitness form\fitness form\bin\Debug\fitness form.pdb
+c:\users\kakuzu\documents\visual studio 2012\Projects\fitness form\fitness form\bin\Debug\fitness form.xml
+c:\users\kakuzu\documents\visual studio 2012\Projects\fitness form\fitness form\obj\Debug\fitness_form.Form1.resources
+c:\users\kakuzu\documents\visual studio 2012\Projects\fitness form\fitness form\obj\Debug\fitness_form.Resources.resources
+c:\users\kakuzu\documents\visual studio 2012\Projects\fitness form\fitness form\obj\Debug\fitness form.vbproj.GenerateResource.Cache
+c:\users\kakuzu\documents\visual studio 2012\Projects\fitness form\fitness form\obj\Debug\fitness form.exe
+c:\users\kakuzu\documents\visual studio 2012\Projects\fitness form\fitness form\obj\Debug\fitness form.xml
+c:\users\kakuzu\documents\visual studio 2012\Projects\fitness form\fitness form\obj\Debug\fitness form.pdb
