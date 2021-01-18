@@ -15,3 +15,14 @@ C:\Users\alakf\Desktop\gym_git\gym_manager\fitness form\fitness form\obj\Debug\f
 C:\Users\alakf\Desktop\gym_git\gym_manager\fitness form\fitness form\obj\Debug\fitness_form.Form1.resources
 C:\Users\alakf\Desktop\gym_git\gym_manager\fitness form\fitness form\obj\Debug\fitness_form.Resources.resources
 C:\Users\alakf\Desktop\gym_git\gym_manager\fitness form\fitness form\obj\Debug\fitness form.vbproj.GenerateResource.Cache
+C:\Users\ANDROID12-54\Desktop\tele\gym_manager\fitness form\fitness form\bin\Debug\fitness form.exe.config
+C:\Users\ANDROID12-54\Desktop\tele\gym_manager\fitness form\fitness form\obj\Debug\fitness form.exe
+C:\Users\ANDROID12-54\Desktop\tele\gym_manager\fitness form\fitness form\obj\Debug\fitness form.xml
+C:\Users\ANDROID12-54\Desktop\tele\gym_manager\fitness form\fitness form\obj\Debug\fitness form.pdb
+C:\Users\ANDROID12-54\Desktop\tele\gym_manager\fitness form\fitness form\bin\Debug\gymdata.accdb
+C:\Users\ANDROID12-54\Desktop\tele\gym_manager\fitness form\fitness form\bin\Debug\fitness form.exe
+C:\Users\ANDROID12-54\Desktop\tele\gym_manager\fitness form\fitness form\bin\Debug\fitness form.pdb
+C:\Users\ANDROID12-54\Desktop\tele\gym_manager\fitness form\fitness form\bin\Debug\fitness form.xml
+C:\Users\ANDROID12-54\Desktop\tele\gym_manager\fitness form\fitness form\obj\Debug\fitness_form.Form1.resources
+C:\Users\ANDROID12-54\Desktop\tele\gym_manager\fitness form\fitness form\obj\Debug\fitness_form.Resources.resources
+C:\Users\ANDROID12-54\Desktop\tele\gym_manager\fitness form\fitness form\obj\Debug\fitness form.vbproj.GenerateResource.Cache
