@@ -8,3 +8,10 @@ c:\users\kakuzu\documents\visual studio 2012\Projects\fitness form\fitness form\
 c:\users\kakuzu\documents\visual studio 2012\Projects\fitness form\fitness form\obj\Debug\fitness form.exe
 c:\users\kakuzu\documents\visual studio 2012\Projects\fitness form\fitness form\obj\Debug\fitness form.xml
 c:\users\kakuzu\documents\visual studio 2012\Projects\fitness form\fitness form\obj\Debug\fitness form.pdb
+C:\Users\alakf\Desktop\gym_git\gym_manager\fitness form\fitness form\bin\Debug\fitness form.exe.config
+C:\Users\alakf\Desktop\gym_git\gym_manager\fitness form\fitness form\obj\Debug\fitness form.exe
+C:\Users\alakf\Desktop\gym_git\gym_manager\fitness form\fitness form\obj\Debug\fitness form.xml
+C:\Users\alakf\Desktop\gym_git\gym_manager\fitness form\fitness form\obj\Debug\fitness form.pdb
+C:\Users\alakf\Desktop\gym_git\gym_manager\fitness form\fitness form\obj\Debug\fitness_form.Form1.resources
+C:\Users\alakf\Desktop\gym_git\gym_manager\fitness form\fitness form\obj\Debug\fitness_form.Resources.resources
+C:\Users\alakf\Desktop\gym_git\gym_manager\fitness form\fitness form\obj\Debug\fitness form.vbproj.GenerateResource.Cache

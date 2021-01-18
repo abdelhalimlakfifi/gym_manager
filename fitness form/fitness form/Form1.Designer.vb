@@ -110,7 +110,7 @@ Partial Class Form1
         Me.CheckBox1.ForeColor = System.Drawing.Color.Silver
         Me.CheckBox1.Location = New System.Drawing.Point(33, 220)
         Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(101, 17)
+        Me.CheckBox1.Size = New System.Drawing.Size(102, 17)
         Me.CheckBox1.TabIndex = 4
         Me.CheckBox1.Text = "Show Password"
         Me.CheckBox1.UseVisualStyleBackColor = True
@@ -121,7 +121,7 @@ Partial Class Form1
         Me.Linkacc.LinkColor = System.Drawing.Color.Silver
         Me.Linkacc.Location = New System.Drawing.Point(128, 347)
         Me.Linkacc.Name = "Linkacc"
-        Me.Linkacc.Size = New System.Drawing.Size(68, 13)
+        Me.Linkacc.Size = New System.Drawing.Size(69, 13)
         Me.Linkacc.TabIndex = 3
         Me.Linkacc.TabStop = True
         Me.Linkacc.Text = "Add Account"
