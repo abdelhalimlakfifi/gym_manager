@@ -1,0 +1,34 @@
+C:\Users\alakf\AppData\Local\Temporary Projects\gym\bin\Debug\gym.exe.config
+C:\Users\alakf\AppData\Local\Temporary Projects\gym\bin\Debug\gym.exe
+C:\Users\alakf\AppData\Local\Temporary Projects\gym\bin\Debug\gym.pdb
+C:\Users\alakf\AppData\Local\Temporary Projects\gym\bin\Debug\gym.xml
+C:\Users\alakf\AppData\Local\Temporary Projects\gym\obj\Debug\gym.Form1.resources
+C:\Users\alakf\AppData\Local\Temporary Projects\gym\obj\Debug\gym.Resources.resources
+C:\Users\alakf\AppData\Local\Temporary Projects\gym\obj\Debug\gym.vbproj.GenerateResource.Cache
+C:\Users\alakf\AppData\Local\Temporary Projects\gym\obj\Debug\gym.exe
+C:\Users\alakf\AppData\Local\Temporary Projects\gym\obj\Debug\gym.xml
+C:\Users\alakf\AppData\Local\Temporary Projects\gym\obj\Debug\gym.pdb
+C:\Users\alakf\Desktop\New folder (2)\gym\gym\bin\Debug\gym.exe.config
+C:\Users\alakf\Desktop\New folder (2)\gym\gym\obj\Debug\gym.exe
+C:\Users\alakf\Desktop\New folder (2)\gym\gym\obj\Debug\gym.xml
+C:\Users\alakf\Desktop\New folder (2)\gym\gym\obj\Debug\gym.pdb
+C:\Users\alakf\Desktop\New folder (2)\gym\gym\bin\Debug\gymdata.accdb
+C:\Users\alakf\Desktop\New folder (2)\gym\gym\bin\Debug\gym.exe
+C:\Users\alakf\Desktop\New folder (2)\gym\gym\bin\Debug\gym.pdb
+C:\Users\alakf\Desktop\New folder (2)\gym\gym\bin\Debug\gym.xml
+C:\Users\alakf\Desktop\New folder (2)\gym\gym\obj\Debug\gym.Form1.resources
+C:\Users\alakf\Desktop\New folder (2)\gym\gym\obj\Debug\gym.Resources.resources
+C:\Users\alakf\Desktop\New folder (2)\gym\gym\obj\Debug\gym.vbproj.GenerateResource.Cache
+C:\Users\alakf\Desktop\New folder (2)\gym\gym\obj\Debug\gym.Form2.resources
+C:\Users\alakf\Desktop\gym\gym_manager\gym\gym\bin\Debug\gym.exe.config
+C:\Users\alakf\Desktop\gym\gym_manager\gym\gym\obj\Debug\gym.exe
+C:\Users\alakf\Desktop\gym\gym_manager\gym\gym\obj\Debug\gym.xml
+C:\Users\alakf\Desktop\gym\gym_manager\gym\gym\obj\Debug\gym.pdb
+C:\Users\alakf\Desktop\gym\gym_manager\gym\gym\bin\Debug\gymdata.accdb
+C:\Users\alakf\Desktop\gym\gym_manager\gym\gym\bin\Debug\gym.exe
+C:\Users\alakf\Desktop\gym\gym_manager\gym\gym\bin\Debug\gym.pdb
+C:\Users\alakf\Desktop\gym\gym_manager\gym\gym\bin\Debug\gym.xml
+C:\Users\alakf\Desktop\gym\gym_manager\gym\gym\obj\Debug\gym.Form1.resources
+C:\Users\alakf\Desktop\gym\gym_manager\gym\gym\obj\Debug\gym.Form2.resources
+C:\Users\alakf\Desktop\gym\gym_manager\gym\gym\obj\Debug\gym.Resources.resources
+C:\Users\alakf\Desktop\gym\gym_manager\gym\gym\obj\Debug\gym.vbproj.GenerateResource.Cache
