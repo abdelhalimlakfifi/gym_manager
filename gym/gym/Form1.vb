@@ -26,4 +26,16 @@ Public Class Form1
     Private Sub TextBox3_TextChanged(sender As Object, e As EventArgs)
 
     End Sub
+
+    Private Sub TextBox2_TextChanged(sender As Object, e As EventArgs) Handles TextBox2.TextChanged
+
+    End Sub
+
+    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
+        If TextBox2.PasswordChar = Nothing Then
+            TextBox2.PasswordChar = "*"
+        Else
+            TextBox2.PasswordChar = ""
+        End If
+    End Sub
 End Class
