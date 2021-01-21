@@ -84,6 +84,18 @@
     <Compile Include="Form2.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="addUserForm.Designer.vb">
+      <DependentUpon>addUserForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="addUserForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="blacklistForm.Designer.vb">
+      <DependentUpon>blacklistForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="blacklistForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="gymdataDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -104,6 +116,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="ValidationForm.Designer.vb">
+      <DependentUpon>ValidationForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ValidationForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
@@ -112,11 +130,20 @@
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="addUserForm.resx">
+      <DependentUpon>addUserForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="blacklistForm.resx">
+      <DependentUpon>blacklistForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ValidationForm.resx">
+      <DependentUpon>ValidationForm.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

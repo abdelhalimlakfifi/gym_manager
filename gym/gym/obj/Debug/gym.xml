@@ -27,11 +27,23 @@ gym
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
+</member><member name="T:gym.gymdataDataSet.userDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
 </member><member name="T:gym.gymdataDataSet.adminRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
+</member><member name="T:gym.gymdataDataSet.userRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
 </member><member name="T:gym.gymdataDataSet.adminRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:gym.gymdataDataSet.userRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
@@ -40,6 +52,10 @@ Row event argument class
 Represents a strongly typed in-memory cache of data.
 </summary>
 </member><member name="T:gym.gymdataDataSetTableAdapters.adminTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:gym.gymdataDataSetTableAdapters.userTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>

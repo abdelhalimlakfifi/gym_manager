@@ -83,7 +83,7 @@ Partial Class Form1
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.TextBox2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.TextBox2.Location = New System.Drawing.Point(55, 169)
+        Me.TextBox2.Location = New System.Drawing.Point(54, 155)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.TextBox2.Size = New System.Drawing.Size(196, 20)
@@ -98,7 +98,7 @@ Partial Class Form1
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.TextBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.TextBox1.Location = New System.Drawing.Point(55, 126)
+        Me.TextBox1.Location = New System.Drawing.Point(55, 119)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(196, 20)
         Me.TextBox1.TabIndex = 0
@@ -156,7 +156,10 @@ Partial Class Form1
         Me.ClientSize = New System.Drawing.Size(766, 474)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.MaximizeBox = False
         Me.Name = "Form1"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form1"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
