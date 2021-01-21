@@ -52,7 +52,7 @@ Partial Class Form2
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(215, 386)
+        Me.Panel1.Size = New System.Drawing.Size(215, 396)
         Me.Panel1.TabIndex = 0
         '
         'Button6
@@ -106,7 +106,7 @@ Partial Class Form2
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel2.Location = New System.Drawing.Point(215, 0)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(648, 64)
+        Me.Panel2.Size = New System.Drawing.Size(662, 64)
         Me.Panel2.TabIndex = 1
         '
         'Panel3
@@ -142,14 +142,14 @@ Partial Class Form2
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel4.Location = New System.Drawing.Point(215, 64)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(648, 322)
+        Me.Panel4.Size = New System.Drawing.Size(662, 332)
         Me.Panel4.TabIndex = 2
         '
         'Form2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(863, 386)
+        Me.ClientSize = New System.Drawing.Size(877, 396)
         Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
