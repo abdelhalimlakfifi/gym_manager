@@ -3,7 +3,7 @@ Imports System.Data
 Public Class addUserForm
     Dim con As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\alakf\Desktop\gym\gym_manager\DATABASE\gymdata.accdb")
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
-        MsgBox(sexeBox.Text)
+
         Dim sql As String
         Dim cmd As New OleDb.OleDbCommand
         ' Dim dateE As DateTime = New DateTime(dateBox.Text)
