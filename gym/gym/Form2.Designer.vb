@@ -22,7 +22,6 @@ Partial Class Form2
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
@@ -31,15 +30,9 @@ Partial Class Form2
         Me.addUser = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.UserBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.GymdataDataSet = New gym.gymdataDataSet()
-        Me.UserTableAdapter = New gym.gymdataDataSetTableAdapters.userTableAdapter()
-        Me.TableAdapterManager = New gym.gymdataDataSetTableAdapters.TableAdapterManager()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
-        CType(Me.UserBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.GymdataDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -52,7 +45,7 @@ Partial Class Form2
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(215, 396)
+        Me.Panel1.Size = New System.Drawing.Size(215, 416)
         Me.Panel1.TabIndex = 0
         '
         'Button6
@@ -106,7 +99,7 @@ Partial Class Form2
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel2.Location = New System.Drawing.Point(215, 0)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(662, 64)
+        Me.Panel2.Size = New System.Drawing.Size(633, 61)
         Me.Panel2.TabIndex = 1
         '
         'Panel3
@@ -116,61 +109,34 @@ Partial Class Form2
         Me.Panel3.Size = New System.Drawing.Size(652, 369)
         Me.Panel3.TabIndex = 20
         '
-        'UserBindingSource
-        '
-        Me.UserBindingSource.DataMember = "user"
-        Me.UserBindingSource.DataSource = Me.GymdataDataSet
-        '
-        'GymdataDataSet
-        '
-        Me.GymdataDataSet.DataSetName = "gymdataDataSet"
-        Me.GymdataDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'UserTableAdapter
-        '
-        Me.UserTableAdapter.ClearBeforeFill = True
-        '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.adminTableAdapter = Nothing
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.UpdateOrder = gym.gymdataDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        Me.TableAdapterManager.userTableAdapter = Me.UserTableAdapter
-        '
         'Panel4
         '
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel4.Location = New System.Drawing.Point(215, 64)
+        Me.Panel4.Location = New System.Drawing.Point(215, 61)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(662, 332)
+        Me.Panel4.Size = New System.Drawing.Size(633, 355)
         Me.Panel4.TabIndex = 2
         '
         'Form2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(877, 396)
+        Me.ClientSize = New System.Drawing.Size(848, 416)
         Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.MaximizeBox = False
         Me.Name = "Form2"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "l"
+        Me.Text = "Form 2 "
         Me.Panel1.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
-        CType(Me.UserBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.GymdataDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
     Friend WithEvents addUser As System.Windows.Forms.Button
-    Friend WithEvents UserBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents GymdataDataSet As gym.gymdataDataSet
-    Friend WithEvents UserTableAdapter As gym.gymdataDataSetTableAdapters.userTableAdapter
-    Friend WithEvents TableAdapterManager As gym.gymdataDataSetTableAdapters.TableAdapterManager
     Friend WithEvents Button6 As System.Windows.Forms.Button
     Friend WithEvents Button5 As System.Windows.Forms.Button
     Friend WithEvents ButtonBlacklist As System.Windows.Forms.Button

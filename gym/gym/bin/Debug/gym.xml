@@ -6,75 +6,7 @@ gym
 </name>
 </assembly>
 <members>
-<member name="T:gym.gymdataDataSet1.adminDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:gym.gymdataDataSet1.userDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:gym.gymdataDataSet1.adminRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:gym.gymdataDataSet1.userRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:gym.gymdataDataSet1.adminRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:gym.gymdataDataSet1.userRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:gym.gymdataDataSet1">
-	<summary>
-Represents a strongly typed in-memory cache of data.
-</summary>
-</member><member name="T:gym.gymdataDataSet1TableAdapters.adminTableAdapter">
-	<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member><member name="T:gym.gymdataDataSet1TableAdapters.userTableAdapter">
-	<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member><member name="M:gym.gymdataDataSet1TableAdapters.TableAdapterManager.UpdateUpdatedRows(gym.gymdataDataSet1,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
-	<summary>
-Update rows in top-down order.
-</summary>
-</member><member name="M:gym.gymdataDataSet1TableAdapters.TableAdapterManager.UpdateInsertedRows(gym.gymdataDataSet1,System.Collections.Generic.List{System.Data.DataRow})">
-	<summary>
-Insert rows in top-down order.
-</summary>
-</member><member name="M:gym.gymdataDataSet1TableAdapters.TableAdapterManager.UpdateDeletedRows(gym.gymdataDataSet1,System.Collections.Generic.List{System.Data.DataRow})">
-	<summary>
-Delete rows in bottom-up order.
-</summary>
-</member><member name="M:gym.gymdataDataSet1TableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
-	<summary>
-Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
-</summary>
-</member><member name="M:gym.gymdataDataSet1TableAdapters.TableAdapterManager.UpdateAll(gym.gymdataDataSet1)">
-	<summary>
-Update all changes to the dataset.
-</summary>
-</member><member name="T:gym.gymdataDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption">
-	<summary>
-Update Order Option
-</summary>
-</member><member name="T:gym.gymdataDataSet1TableAdapters.TableAdapterManager.SelfReferenceComparer">
-	<summary>
-Used to sort self-referenced table's rows
-</summary>
-</member><member name="T:gym.gymdataDataSet1TableAdapters.TableAdapterManager">
-	<summary>
-TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
-</summary>
-</member><member name="P:gym.My.Resources.Resources.ResourceManager">
+<member name="P:gym.My.Resources.Resources.ResourceManager">
 	<summary>
   Returns the cached ResourceManager instance used by this class.
 </summary>

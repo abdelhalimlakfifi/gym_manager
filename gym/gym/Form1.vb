@@ -2,7 +2,8 @@
 Imports System.Data
 
 Public Class Form1
-    Dim connections As New OleDbConnection(My.Settings.gymdata)
+    Dim connections As New OleDbConnection(My.Settings.gymdataConnectionString)
+
     Private Sub Login_Click(sender As Object, e As EventArgs) Handles Login.Click
 
         If TextBox1.Text = Nothing Or TextBox2.Text = Nothing Then
@@ -38,4 +39,6 @@ Public Class Form1
             TextBox2.PasswordChar = ""
         End If
     End Sub
+
+    
 End Class
