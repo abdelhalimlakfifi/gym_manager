@@ -12,7 +12,7 @@
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-
+        switchPanel(validation)
     End Sub
 
     Private Sub ButtonBlacklist_Click(sender As Object, e As EventArgs) Handles ButtonBlacklist.Click

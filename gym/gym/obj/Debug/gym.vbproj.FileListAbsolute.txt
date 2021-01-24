@@ -44,3 +44,4 @@ C:\Users\ANDROID12-54\Desktop\tele\gym_manager\gym\gym\obj\Debug\gym.Form2.resou
 C:\Users\ANDROID12-54\Desktop\tele\gym_manager\gym\gym\obj\Debug\gym.Resources.resources
 C:\Users\ANDROID12-54\Desktop\tele\gym_manager\gym\gym\obj\Debug\gym.vbproj.GenerateResource.Cache
 C:\Users\alakf\Desktop\gym\gym_manager\gym\gym\obj\Debug\gym.addUserForm.resources
+C:\Users\alakf\Desktop\gym\gym_manager\gym\gym\obj\Debug\gym.Validation.resources
