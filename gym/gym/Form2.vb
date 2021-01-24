@@ -27,4 +27,8 @@
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
         switchPanel(AdminForm)
     End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        switchPanel(aboutUsForm)
+    End Sub
 End Class
