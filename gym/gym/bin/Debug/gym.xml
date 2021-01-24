@@ -31,6 +31,10 @@ Represents the strongly named DataTable class.
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
+</member><member name="T:gym.gymdataDataSet.blacklistDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
 </member><member name="T:gym.gymdataDataSet.adminRow">
 	<summary>
 Represents strongly named DataRow class.
@@ -39,11 +43,19 @@ Represents strongly named DataRow class.
 	<summary>
 Represents strongly named DataRow class.
 </summary>
+</member><member name="T:gym.gymdataDataSet.blacklistRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
 </member><member name="T:gym.gymdataDataSet.adminRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
 </member><member name="T:gym.gymdataDataSet.userRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:gym.gymdataDataSet.blacklistRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
@@ -56,6 +68,10 @@ Represents a strongly typed in-memory cache of data.
 Represents the connection and commands used to retrieve and save data.
 </summary>
 </member><member name="T:gym.gymdataDataSetTableAdapters.userTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:gym.gymdataDataSetTableAdapters.blacklistTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>

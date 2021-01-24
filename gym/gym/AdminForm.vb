@@ -1,10 +1,9 @@
 ﻿Imports System.Data.OleDb
 Imports System.Data
 
-Public Class Validation
+Public Class AdminForm
     Dim connections As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\alakf\Desktop\gym\gym_manager\DATABASE\gymdata.accdb")
-    Private Sub Validation_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        dateBox.Format = DateTimePickerFormat.Short
+    Private Sub AdminForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
             If connections.State = ConnectionState.Closed Then
                 connections.Open()
@@ -13,7 +12,7 @@ Public Class Validation
             Dim cmd As New OleDb.OleDbCommand
             Dim dt As New DataTable
             Dim da As New OleDb.OleDbDataAdapter
-            sql = "Select * from [user]"
+            sql = "Select N,Uname,Nom,Prenom,Telephone from [admin]"
             cmd.Connection = connections
             cmd.CommandText = sql
             da.SelectCommand = cmd
@@ -23,56 +22,85 @@ Public Class Validation
             MsgBox(ex.Message)
         End Try
     End Sub
+
+    Private Sub TextBox6_TextChanged(sender As Object, e As EventArgs) Handles TextBox6.TextChanged
+        Try
+            If connections.State = ConnectionState.Closed Then
+                connections.Open()
+            End If
+            Dim sql As String
+            Dim cmd As New OleDb.OleDbCommand
+            Dim dt As New DataTable
+            Dim da As New OleDb.OleDbDataAdapter
+            sql = "Select N,Uname,Nom,Prenom,Telephone from [admin] WHERE Nom LIKE '%" & TextBox6.Text & "%' Or Prenom LIKE '%" & TextBox6.Text & "%' Or Uname LIKE '%" & TextBox6.Text & "%';"
+            cmd.Connection = connections
+            cmd.CommandText = sql
+            da.SelectCommand = cmd
+            da.Fill(dt)
+            DataGridView1.DataSource = dt
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            connections.Close()
+        End Try
+    End Sub
     Dim n As Integer
     Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
         n = DataGridView1.CurrentRow.Cells(0).Value
-        nomBox.Text = DataGridView1.CurrentRow.Cells(1).Value
-        prenomBox.Text = DataGridView1.CurrentRow.Cells(2).Value
-        sexeBox.Text = DataGridView1.CurrentRow.Cells(3).Value
-        phoneBox.Text = DataGridView1.CurrentRow.Cells(4).Value
-        prixBox.Text = DataGridView1.CurrentRow.Cells(5).Value
-        dateBox.Text = DataGridView1.CurrentRow.Cells(6).Value
-        moisBox.Text = DataGridView1.CurrentRow.Cells(7).Value
-        adminBox.Text = DataGridView1.CurrentRow.Cells(8).Value
+        TextBox1.Text = DataGridView1.CurrentRow.Cells(2).Value
+        TextBox2.Text = DataGridView1.CurrentRow.Cells(3).Value
+        TextBox3.Text = DataGridView1.CurrentRow.Cells(4).Value
+        TextBox4.Text = DataGridView1.CurrentRow.Cells(1).Value
     End Sub
 
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
 
     End Sub
 
-    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim sql As String
+        Dim cmd As New OleDb.OleDbCommand
+        Dim i As Integer
         Try
             If connections.State = ConnectionState.Closed Then
                 connections.Open()
             End If
-            Dim sql As String
-            Dim cmd As New OleDb.OleDbCommand
+            sql = "INSERT INTO [admin] (Uname, pass, Nom,Prenom,Telephone) VALUES ('" & TextBox4.Text & "','" & TextBox5.Text & "','" & TextBox1.Text & "','" & TextBox2.Text & "','" & TextBox3.Text & "');"
+            cmd.Connection = connections
+            cmd.CommandText = sql
+
+            i = cmd.ExecuteNonQuery
+            If (i > 0) Then
+                MsgBox("Done")
+            Else
+                MsgBox("not done")
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
             Dim dt As New DataTable
             Dim da As New OleDb.OleDbDataAdapter
-            sql = "Select * from [user] WHERE first_name LIKE '%" & TextBox1.Text & "%' Or last_name LIKE '%" & TextBox1.Text & "%';"
+            sql = "Select N,Uname,Nom,Prenom,Telephone from [admin] ;"
             cmd.Connection = connections
             cmd.CommandText = sql
             da.SelectCommand = cmd
             da.Fill(dt)
             DataGridView1.DataSource = dt
-        Catch ex As Exception
-            MsgBox(ex.Message)
-        Finally
             connections.Close()
         End Try
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Dim sql As String
         Dim cmd As New OleDb.OleDbCommand
-        ' Dim dateE As DateTime = New DateTime(dateBox.Text)
         Dim i As Integer
         Try
             If connections.State = ConnectionState.Closed Then
                 connections.Open()
             End If
 
-            sql = "UPDATE [user] SET registration_date='" & dateBox.Text & "', Uname='" & adminBox.Text & "' WHERE ID_users=" & Val(n) & ";"
+            sql = "DELETE * from [admin] WHERE N=" & Val(n) & ";"
             cmd.Connection = connections
             cmd.CommandText = sql
 
@@ -87,41 +115,9 @@ Public Class Validation
         Finally
             Dim dt As New DataTable
             Dim da As New OleDb.OleDbDataAdapter
-            sql = "Select * from [user]"
+            sql = "Select N,Uname,Nom,Prenom,Telephone from [admin] ;"
             cmd.Connection = connections
             cmd.CommandText = sql
-            da.SelectCommand = cmd
-            da.Fill(dt)
-            DataGridView1.DataSource = dt
-            connections.Close()
-        End Try
-    End Sub
-
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Dim sql As String
-        Dim cmd As New OleDb.OleDbCommand
-        Try
-            If connections.State = ConnectionState.Closed Then
-                connections.Open()
-            End If
-            Dim i As Integer
-            sql = "DELETE * from [user] WHERE ID_users=" & Val(n) & ";"
-            cmd.Connection = connections
-            cmd.CommandText = sql
-            i = cmd.ExecuteNonQuery
-            If (i > 0) Then
-                MsgBox("Done")
-            Else
-                MsgBox("didn't work")
-            End If
-        Catch ex As Exception
-            MsgBox(ex.Message)
-        Finally
-            Dim dt As New DataTable
-            Dim da As New OleDb.OleDbDataAdapter
-            Sql = "Select * from [user]"
-            cmd.Connection = connections
-            cmd.CommandText = Sql
             da.SelectCommand = cmd
             da.Fill(dt)
             DataGridView1.DataSource = dt
@@ -130,23 +126,11 @@ Public Class Validation
 
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        Try
-            If connections.State = ConnectionState.Closed Then
-                connections.Open()
-            End If
-            Dim sql As String
-            Dim cmd As New OleDb.OleDbCommand
-            Dim dt As New DataTable
-            Dim da As New OleDb.OleDbDataAdapter
-            sql = "Select * from [user]"
-            cmd.Connection = connections
-            cmd.CommandText = sql
-            da.SelectCommand = cmd
-            da.Fill(dt)
-            DataGridView1.DataSource = dt
-        Catch ex As Exception
-            MsgBox(ex.Message)
-        End Try
+    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
+        If TextBox5.PasswordChar = "*" Then
+            TextBox5.PasswordChar = ""
+        Else
+            TextBox5.PasswordChar = "*"
+        End If
     End Sub
 End Class

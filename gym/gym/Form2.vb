@@ -16,11 +16,15 @@
     End Sub
 
     Private Sub ButtonBlacklist_Click(sender As Object, e As EventArgs) Handles ButtonBlacklist.Click
-
+        switchPanel(Blacklist)
     End Sub
 
     
     Private Sub addUser_Click(sender As Object, e As EventArgs) Handles addUser.Click
         switchPanel(addUserForm)
+    End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        switchPanel(AdminForm)
     End Sub
 End Class

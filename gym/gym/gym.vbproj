@@ -77,6 +77,18 @@
     <Compile Include="addUserForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="AdminForm.Designer.vb">
+      <DependentUpon>AdminForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Blacklist.Designer.vb">
+      <DependentUpon>Blacklist.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Blacklist.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +132,12 @@
   <ItemGroup>
     <EmbeddedResource Include="addUserForm.resx">
       <DependentUpon>addUserForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForm.resx">
+      <DependentUpon>AdminForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Blacklist.resx">
+      <DependentUpon>Blacklist.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
