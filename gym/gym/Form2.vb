@@ -31,4 +31,12 @@
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
         switchPanel(aboutUsForm)
     End Sub
+
+    Private Sub Panel4_Paint(sender As Object, e As PaintEventArgs) Handles Panel4.Paint
+
+    End Sub
+
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+
+    End Sub
 End Class
