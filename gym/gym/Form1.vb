@@ -7,7 +7,7 @@ Public Class Form1
     Private Sub Login_Click(sender As Object, e As EventArgs) Handles Login.Click
 
         If TextBox1.Text = Nothing Or TextBox2.Text = Nothing Then
-            MsgBox("aktaab chi haja asahbi.", MsgBoxStyle.Exclamation)
+            MsgBox("Saisir username ou le mots de passe.", MsgBoxStyle.Exclamation)
         Else
             If connections.State = ConnectionState.Closed Then
                 connections.Open()

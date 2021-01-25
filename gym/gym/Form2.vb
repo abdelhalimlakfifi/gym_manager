@@ -8,6 +8,8 @@
 
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Form1.Close()
+        Timer1.Enabled = True
+        switchPanel(aboutUsForm)
 
     End Sub
 
@@ -38,5 +40,13 @@
 
     Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
 
+    End Sub
+
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+
+    End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        Label1.Text = Date.Now.ToString("dd-MM-yyy hh:mm:ss")
     End Sub
 End Class

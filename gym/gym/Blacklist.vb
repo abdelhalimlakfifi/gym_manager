@@ -7,8 +7,7 @@ Public Class Blacklist
     Private Sub Blacklist_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim sql As String
         Dim cmd As New OleDb.OleDbCommand
-        ' Dim dateE As DateTime = New DateTime(dateBox.Text)
-        Dim i As Integer
+
         Try
             If connections.State = ConnectionState.Closed Then
                 connections.Open()
@@ -17,13 +16,6 @@ Public Class Blacklist
             sql = "UPDATE [user] SET today='" & Date.Today & "' WHERE ID_users>0;"
             cmd.Connection = connections
             cmd.CommandText = sql
-
-            i = cmd.ExecuteNonQuery
-            If (i > 0) Then
-                MsgBox("Done")
-            Else
-                MsgBox("didn't work")
-            End If
         Catch ex As Exception
             MsgBox(ex.Message)
         Finally
