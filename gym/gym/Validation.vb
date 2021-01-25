@@ -24,7 +24,7 @@ Public Class Validation
         End Try
     End Sub
     Dim n As Integer
-    Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
+    Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs)
         n = DataGridView1.CurrentRow.Cells(0).Value
         nomBox.Text = DataGridView1.CurrentRow.Cells(1).Value
         prenomBox.Text = DataGridView1.CurrentRow.Cells(2).Value
@@ -36,7 +36,7 @@ Public Class Validation
         adminBox.Text = DataGridView1.CurrentRow.Cells(8).Value
     End Sub
 
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
 
     End Sub
 

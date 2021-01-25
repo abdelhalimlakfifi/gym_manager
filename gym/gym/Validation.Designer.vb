@@ -22,7 +22,6 @@ Partial Class Validation
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.moisBox = New System.Windows.Forms.NumericUpDown()
         Me.dateBox = New System.Windows.Forms.DateTimePicker()
         Me.sexeBox = New System.Windows.Forms.ComboBox()
@@ -44,23 +43,14 @@ Partial Class Validation
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         CType(Me.moisBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.BackgroundColor = System.Drawing.Color.White
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(14, 53)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(916, 315)
-        Me.DataGridView1.TabIndex = 0
         '
         'moisBox
         '
-        Me.moisBox.Location = New System.Drawing.Point(516, 444)
+        Me.moisBox.Location = New System.Drawing.Point(517, 460)
         Me.moisBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.moisBox.Name = "moisBox"
         Me.moisBox.Size = New System.Drawing.Size(180, 24)
@@ -68,7 +58,7 @@ Partial Class Validation
         '
         'dateBox
         '
-        Me.dateBox.Location = New System.Drawing.Point(516, 412)
+        Me.dateBox.Location = New System.Drawing.Point(517, 428)
         Me.dateBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.dateBox.Name = "dateBox"
         Me.dateBox.Size = New System.Drawing.Size(179, 24)
@@ -79,7 +69,7 @@ Partial Class Validation
         Me.sexeBox.Enabled = False
         Me.sexeBox.FormattingEnabled = True
         Me.sexeBox.Items.AddRange(New Object() {"Male", "Female"})
-        Me.sexeBox.Location = New System.Drawing.Point(161, 443)
+        Me.sexeBox.Location = New System.Drawing.Point(162, 459)
         Me.sexeBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.sexeBox.Name = "sexeBox"
         Me.sexeBox.Size = New System.Drawing.Size(179, 24)
@@ -89,7 +79,7 @@ Partial Class Validation
         '
         Me.Label8.AutoSize = True
         Me.Label8.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label8.Location = New System.Drawing.Point(380, 478)
+        Me.Label8.Location = New System.Drawing.Point(381, 494)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(85, 17)
         Me.Label8.TabIndex = 31
@@ -97,7 +87,7 @@ Partial Class Validation
         '
         'adminBox
         '
-        Me.adminBox.Location = New System.Drawing.Point(516, 474)
+        Me.adminBox.Location = New System.Drawing.Point(517, 490)
         Me.adminBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.adminBox.Name = "adminBox"
         Me.adminBox.Size = New System.Drawing.Size(179, 24)
@@ -107,7 +97,7 @@ Partial Class Validation
         '
         Me.Label7.AutoSize = True
         Me.Label7.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label7.Location = New System.Drawing.Point(380, 446)
+        Me.Label7.Location = New System.Drawing.Point(381, 462)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(73, 17)
         Me.Label7.TabIndex = 29
@@ -117,7 +107,7 @@ Partial Class Validation
         '
         Me.Label6.AutoSize = True
         Me.Label6.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label6.Location = New System.Drawing.Point(380, 415)
+        Me.Label6.Location = New System.Drawing.Point(381, 431)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(115, 17)
         Me.Label6.TabIndex = 28
@@ -127,7 +117,7 @@ Partial Class Validation
         '
         Me.Label5.AutoSize = True
         Me.Label5.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label5.Location = New System.Drawing.Point(380, 386)
+        Me.Label5.Location = New System.Drawing.Point(381, 402)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(124, 17)
         Me.Label5.TabIndex = 27
@@ -136,7 +126,7 @@ Partial Class Validation
         'prixBox
         '
         Me.prixBox.Enabled = False
-        Me.prixBox.Location = New System.Drawing.Point(516, 378)
+        Me.prixBox.Location = New System.Drawing.Point(517, 394)
         Me.prixBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.prixBox.Name = "prixBox"
         Me.prixBox.Size = New System.Drawing.Size(179, 24)
@@ -146,7 +136,7 @@ Partial Class Validation
         '
         Me.Label4.AutoSize = True
         Me.Label4.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label4.Location = New System.Drawing.Point(23, 482)
+        Me.Label4.Location = New System.Drawing.Point(24, 498)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(47, 17)
         Me.Label4.TabIndex = 25
@@ -155,7 +145,7 @@ Partial Class Validation
         'phoneBox
         '
         Me.phoneBox.Enabled = False
-        Me.phoneBox.Location = New System.Drawing.Point(161, 474)
+        Me.phoneBox.Location = New System.Drawing.Point(162, 490)
         Me.phoneBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.phoneBox.Name = "phoneBox"
         Me.phoneBox.Size = New System.Drawing.Size(179, 24)
@@ -165,7 +155,7 @@ Partial Class Validation
         '
         Me.Label3.AutoSize = True
         Me.Label3.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label3.Location = New System.Drawing.Point(23, 450)
+        Me.Label3.Location = New System.Drawing.Point(24, 466)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(38, 17)
         Me.Label3.TabIndex = 23
@@ -175,7 +165,7 @@ Partial Class Validation
         '
         Me.Label2.AutoSize = True
         Me.Label2.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label2.Location = New System.Drawing.Point(23, 418)
+        Me.Label2.Location = New System.Drawing.Point(24, 434)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(56, 17)
         Me.Label2.TabIndex = 22
@@ -184,7 +174,7 @@ Partial Class Validation
         'prenomBox
         '
         Me.prenomBox.Enabled = False
-        Me.prenomBox.Location = New System.Drawing.Point(161, 410)
+        Me.prenomBox.Location = New System.Drawing.Point(162, 426)
         Me.prenomBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.prenomBox.Name = "prenomBox"
         Me.prenomBox.Size = New System.Drawing.Size(179, 24)
@@ -194,7 +184,7 @@ Partial Class Validation
         '
         Me.Label1.AutoSize = True
         Me.Label1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label1.Location = New System.Drawing.Point(23, 386)
+        Me.Label1.Location = New System.Drawing.Point(24, 402)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(37, 17)
         Me.Label1.TabIndex = 20
@@ -203,7 +193,7 @@ Partial Class Validation
         'nomBox
         '
         Me.nomBox.Enabled = False
-        Me.nomBox.Location = New System.Drawing.Point(161, 378)
+        Me.nomBox.Location = New System.Drawing.Point(162, 394)
         Me.nomBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.nomBox.Name = "nomBox"
         Me.nomBox.Size = New System.Drawing.Size(179, 24)
@@ -214,7 +204,7 @@ Partial Class Validation
         Me.Button1.BackColor = System.Drawing.Color.LightSkyBlue
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button1.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Button1.Location = New System.Drawing.Point(758, 375)
+        Me.Button1.Location = New System.Drawing.Point(758, 407)
         Me.Button1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(133, 44)
@@ -244,7 +234,7 @@ Partial Class Validation
         Me.Button2.BackColor = System.Drawing.Color.LightSkyBlue
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button2.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Button2.Location = New System.Drawing.Point(758, 425)
+        Me.Button2.Location = New System.Drawing.Point(758, 457)
         Me.Button2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(133, 44)
@@ -265,12 +255,24 @@ Partial Class Validation
         Me.Button3.Text = "load"
         Me.Button3.UseVisualStyleBackColor = False
         '
+        'DataGridView1
+        '
+        Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.GridColor = System.Drawing.SystemColors.ControlText
+        Me.DataGridView1.Location = New System.Drawing.Point(52, 59)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.RowTemplate.Height = 26
+        Me.DataGridView1.Size = New System.Drawing.Size(818, 305)
+        Me.DataGridView1.TabIndex = 40
+        '
         'Validation
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(957, 513)
+        Me.ClientSize = New System.Drawing.Size(903, 554)
+        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Label9)
@@ -292,19 +294,17 @@ Partial Class Validation
         Me.Controls.Add(Me.prenomBox)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.nomBox)
-        Me.Controls.Add(Me.DataGridView1)
         Me.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Name = "Validation"
         Me.Text = "Validation"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.moisBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
     Friend WithEvents moisBox As System.Windows.Forms.NumericUpDown
     Friend WithEvents dateBox As System.Windows.Forms.DateTimePicker
     Friend WithEvents sexeBox As System.Windows.Forms.ComboBox
@@ -326,4 +326,5 @@ Partial Class Validation
     Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents Button3 As System.Windows.Forms.Button
+    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
 End Class

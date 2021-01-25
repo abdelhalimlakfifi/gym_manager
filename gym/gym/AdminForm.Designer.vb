@@ -44,18 +44,19 @@ Partial Class AdminForm
         '
         'DataGridView1
         '
+        Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 67)
+        Me.DataGridView1.Location = New System.Drawing.Point(152, 91)
         Me.DataGridView1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(822, 203)
+        Me.DataGridView1.Size = New System.Drawing.Size(645, 203)
         Me.DataGridView1.TabIndex = 0
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label1.Location = New System.Drawing.Point(425, 290)
+        Me.Label1.Location = New System.Drawing.Point(460, 314)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(74, 17)
         Me.Label1.TabIndex = 1
@@ -63,7 +64,7 @@ Partial Class AdminForm
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(233, 284)
+        Me.TextBox1.Location = New System.Drawing.Point(268, 308)
         Me.TextBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(171, 24)
@@ -71,7 +72,7 @@ Partial Class AdminForm
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(233, 316)
+        Me.TextBox2.Location = New System.Drawing.Point(268, 340)
         Me.TextBox2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(171, 24)
@@ -81,7 +82,7 @@ Partial Class AdminForm
         '
         Me.Label2.AutoSize = True
         Me.Label2.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label2.Location = New System.Drawing.Point(427, 320)
+        Me.Label2.Location = New System.Drawing.Point(462, 344)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(71, 17)
         Me.Label2.TabIndex = 3
@@ -89,7 +90,7 @@ Partial Class AdminForm
         '
         'TextBox3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(233, 348)
+        Me.TextBox3.Location = New System.Drawing.Point(268, 372)
         Me.TextBox3.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(171, 24)
@@ -99,7 +100,7 @@ Partial Class AdminForm
         '
         Me.Label3.AutoSize = True
         Me.Label3.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label3.Location = New System.Drawing.Point(156, 290)
+        Me.Label3.Location = New System.Drawing.Point(191, 314)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(77, 17)
         Me.Label3.TabIndex = 5
@@ -107,7 +108,7 @@ Partial Class AdminForm
         '
         'TextBox4
         '
-        Me.TextBox4.Location = New System.Drawing.Point(500, 284)
+        Me.TextBox4.Location = New System.Drawing.Point(535, 308)
         Me.TextBox4.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(171, 24)
@@ -117,7 +118,7 @@ Partial Class AdminForm
         '
         Me.Label4.AutoSize = True
         Me.Label4.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label4.Location = New System.Drawing.Point(152, 322)
+        Me.Label4.Location = New System.Drawing.Point(187, 346)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(77, 17)
         Me.Label4.TabIndex = 7
@@ -125,7 +126,7 @@ Partial Class AdminForm
         '
         'TextBox5
         '
-        Me.TextBox5.Location = New System.Drawing.Point(500, 316)
+        Me.TextBox5.Location = New System.Drawing.Point(535, 340)
         Me.TextBox5.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
@@ -136,7 +137,7 @@ Partial Class AdminForm
         '
         Me.Label5.AutoSize = True
         Me.Label5.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label5.Location = New System.Drawing.Point(175, 352)
+        Me.Label5.Location = New System.Drawing.Point(210, 376)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(52, 17)
         Me.Label5.TabIndex = 9
@@ -146,7 +147,7 @@ Partial Class AdminForm
         '
         Me.Button1.BackColor = System.Drawing.Color.LightSkyBlue
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button1.Location = New System.Drawing.Point(131, 411)
+        Me.Button1.Location = New System.Drawing.Point(166, 435)
         Me.Button1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(146, 37)
@@ -158,7 +159,7 @@ Partial Class AdminForm
         '
         Me.Button2.BackColor = System.Drawing.Color.LightSkyBlue
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button2.Location = New System.Drawing.Point(353, 411)
+        Me.Button2.Location = New System.Drawing.Point(388, 435)
         Me.Button2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(146, 37)
@@ -170,7 +171,7 @@ Partial Class AdminForm
         '
         Me.Button3.BackColor = System.Drawing.Color.LightSkyBlue
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button3.Location = New System.Drawing.Point(565, 411)
+        Me.Button3.Location = New System.Drawing.Point(600, 435)
         Me.Button3.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(146, 37)
@@ -180,7 +181,7 @@ Partial Class AdminForm
         '
         'TextBox6
         '
-        Me.TextBox6.Location = New System.Drawing.Point(82, 35)
+        Me.TextBox6.Location = New System.Drawing.Point(268, 59)
         Me.TextBox6.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.Size = New System.Drawing.Size(411, 24)
@@ -190,7 +191,7 @@ Partial Class AdminForm
         '
         Me.Label6.AutoSize = True
         Me.Label6.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label6.Location = New System.Drawing.Point(20, 35)
+        Me.Label6.Location = New System.Drawing.Point(206, 59)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(59, 17)
         Me.Label6.TabIndex = 15
@@ -200,7 +201,7 @@ Partial Class AdminForm
         '
         Me.CheckBox1.AutoSize = True
         Me.CheckBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.CheckBox1.Location = New System.Drawing.Point(500, 357)
+        Me.CheckBox1.Location = New System.Drawing.Point(535, 381)
         Me.CheckBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.CheckBox1.Name = "CheckBox1"
         Me.CheckBox1.Size = New System.Drawing.Size(126, 21)
@@ -213,7 +214,7 @@ Partial Class AdminForm
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(850, 478)
+        Me.ClientSize = New System.Drawing.Size(903, 554)
         Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.TextBox6)

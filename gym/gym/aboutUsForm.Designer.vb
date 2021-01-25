@@ -27,7 +27,7 @@ Partial Class aboutUsForm
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(196, 187)
+        Me.Button1.Location = New System.Drawing.Point(317, 228)
         Me.Button1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(245, 28)
@@ -40,7 +40,7 @@ Partial Class aboutUsForm
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(691, 425)
+        Me.ClientSize = New System.Drawing.Size(903, 554)
         Me.Controls.Add(Me.Button1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
