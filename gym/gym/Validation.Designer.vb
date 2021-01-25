@@ -223,6 +223,7 @@ Partial Class Validation
         'Label9
         '
         Me.Label9.AutoSize = True
+        Me.Label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Label9.Location = New System.Drawing.Point(234, 18)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(59, 17)
@@ -294,7 +295,7 @@ Partial Class Validation
         Me.Controls.Add(Me.prenomBox)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.nomBox)
-        Me.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Name = "Validation"
