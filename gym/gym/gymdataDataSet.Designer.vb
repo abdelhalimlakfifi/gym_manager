@@ -358,7 +358,7 @@ Partial Public Class gymdataDataSet
     Partial Public Class adminDataTable
         Inherits Global.System.Data.TypedTableBase(Of adminRow)
         
-        Private _columnN_ As Global.System.Data.DataColumn
+        Private columnN As Global.System.Data.DataColumn
         
         Private columnUname As Global.System.Data.DataColumn
         
@@ -369,8 +369,6 @@ Partial Public Class gymdataDataSet
         Private columnPrenom As Global.System.Data.DataColumn
         
         Private columnTelephone As Global.System.Data.DataColumn
-        
-        Private columnN As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
@@ -409,9 +407,9 @@ Partial Public Class gymdataDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property _N_Column() As Global.System.Data.DataColumn
+        Public ReadOnly Property NColumn() As Global.System.Data.DataColumn
             Get
-                Return Me._columnN_
+                Return Me.columnN
             End Get
         End Property
         
@@ -456,14 +454,6 @@ Partial Public Class gymdataDataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property NColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnN
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -502,7 +492,7 @@ Partial Public Class gymdataDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Overloads Function AddadminRow(ByVal Uname As String, ByVal pass As String, ByVal Nom As String, ByVal Prenom As String, ByVal Telephone As String) As adminRow
             Dim rowadminRow As adminRow = CType(Me.NewRow,adminRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, Uname, pass, Nom, Prenom, Telephone, Nothing}
+            Dim columnValuesArray() As Object = New Object() {Nothing, Uname, pass, Nom, Prenom, Telephone}
             rowadminRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowadminRow)
             Return rowadminRow
@@ -510,8 +500,8 @@ Partial Public Class gymdataDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function FindBy_N_Uname(ByVal _N_ As Integer, ByVal Uname As String) As adminRow
-            Return CType(Me.Rows.Find(New Object() {_N_, Uname}),adminRow)
+        Public Function FindByNUname(ByVal N As Integer, ByVal Uname As String) As adminRow
+            Return CType(Me.Rows.Find(New Object() {N, Uname}),adminRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -531,22 +521,19 @@ Partial Public Class gymdataDataSet
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Friend Sub InitVars()
-            Me._columnN_ = MyBase.Columns("N°")
+            Me.columnN = MyBase.Columns("N")
             Me.columnUname = MyBase.Columns("Uname")
             Me.columnpass = MyBase.Columns("pass")
             Me.columnNom = MyBase.Columns("Nom")
             Me.columnPrenom = MyBase.Columns("Prenom")
             Me.columnTelephone = MyBase.Columns("Telephone")
-            Me.columnN = MyBase.Columns("N")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitClass()
-            Me._columnN_ = New Global.System.Data.DataColumn("N°", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            Me._columnN_.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "_columnN_")
-            Me._columnN_.ExtendedProperties.Add("Generator_UserColumnName", "N°")
-            MyBase.Columns.Add(Me._columnN_)
+            Me.columnN = New Global.System.Data.DataColumn("N", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnN)
             Me.columnUname = New Global.System.Data.DataColumn("Uname", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnUname)
             Me.columnpass = New Global.System.Data.DataColumn("pass", GetType(String), Nothing, Global.System.Data.MappingType.Element)
@@ -557,23 +544,17 @@ Partial Public Class gymdataDataSet
             MyBase.Columns.Add(Me.columnPrenom)
             Me.columnTelephone = New Global.System.Data.DataColumn("Telephone", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnTelephone)
-            Me.columnN = New Global.System.Data.DataColumn("N", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnN)
-            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me._columnN_, Me.columnUname}, true))
-            Me._columnN_.AutoIncrement = true
-            Me._columnN_.AutoIncrementSeed = -1
-            Me._columnN_.AutoIncrementStep = -1
-            Me._columnN_.AllowDBNull = false
+            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnN, Me.columnUname}, true))
+            Me.columnN.AutoIncrement = true
+            Me.columnN.AutoIncrementSeed = -1
+            Me.columnN.AutoIncrementStep = -1
+            Me.columnN.AllowDBNull = false
             Me.columnUname.AllowDBNull = false
             Me.columnUname.MaxLength = 255
             Me.columnpass.MaxLength = 255
             Me.columnNom.MaxLength = 255
             Me.columnPrenom.MaxLength = 255
             Me.columnTelephone.MaxLength = 255
-            Me.columnN.AutoIncrement = true
-            Me.columnN.AutoIncrementSeed = -1
-            Me.columnN.AutoIncrementStep = -1
-            Me.columnN.AllowDBNull = false
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -721,13 +702,13 @@ Partial Public Class gymdataDataSet
         
         Private columnphone As Global.System.Data.DataColumn
         
+        Private columnprix_abonnement As Global.System.Data.DataColumn
+        
         Private columnregistration_date As Global.System.Data.DataColumn
         
         Private columnmois_payer As Global.System.Data.DataColumn
         
         Private columnUname As Global.System.Data.DataColumn
-        
-        Private columnprix_abonnement As Global.System.Data.DataColumn
         
         Private columntoday As Global.System.Data.DataColumn
         
@@ -808,6 +789,14 @@ Partial Public Class gymdataDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property prix_abonnementColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnprix_abonnement
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public ReadOnly Property registration_dateColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnregistration_date
@@ -827,14 +816,6 @@ Partial Public Class gymdataDataSet
         Public ReadOnly Property UnameColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnUname
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property prix_abonnementColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnprix_abonnement
             End Get
         End Property
         
@@ -883,11 +864,11 @@ Partial Public Class gymdataDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function AdduserRow(ByVal first_name As String, ByVal last_name As String, ByVal sexe As String, ByVal phone As String, ByVal registration_date As Date, ByVal mois_payer As Integer, ByVal parentadminRowByadminuser As adminRow, ByVal prix_abonnement As Decimal, ByVal today As Date) As userRow
+        Public Overloads Function AdduserRow(ByVal first_name As String, ByVal last_name As String, ByVal sexe As String, ByVal phone As String, ByVal prix_abonnement As Decimal, ByVal registration_date As Date, ByVal mois_payer As Integer, ByVal parentadminRowByadminuser As adminRow, ByVal today As Date) As userRow
             Dim rowuserRow As userRow = CType(Me.NewRow,userRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, first_name, last_name, sexe, phone, registration_date, mois_payer, Nothing, prix_abonnement, today}
+            Dim columnValuesArray() As Object = New Object() {Nothing, first_name, last_name, sexe, phone, prix_abonnement, registration_date, mois_payer, Nothing, today}
             If (Not (parentadminRowByadminuser) Is Nothing) Then
-                columnValuesArray(7) = parentadminRowByadminuser(1)
+                columnValuesArray(8) = parentadminRowByadminuser(1)
             End If
             rowuserRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowuserRow)
@@ -922,10 +903,10 @@ Partial Public Class gymdataDataSet
             Me.columnlast_name = MyBase.Columns("last_name")
             Me.columnsexe = MyBase.Columns("sexe")
             Me.columnphone = MyBase.Columns("phone")
+            Me.columnprix_abonnement = MyBase.Columns("prix_abonnement")
             Me.columnregistration_date = MyBase.Columns("registration_date")
             Me.columnmois_payer = MyBase.Columns("mois_payer")
             Me.columnUname = MyBase.Columns("Uname")
-            Me.columnprix_abonnement = MyBase.Columns("prix_abonnement")
             Me.columntoday = MyBase.Columns("today")
         End Sub
         
@@ -942,14 +923,14 @@ Partial Public Class gymdataDataSet
             MyBase.Columns.Add(Me.columnsexe)
             Me.columnphone = New Global.System.Data.DataColumn("phone", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnphone)
+            Me.columnprix_abonnement = New Global.System.Data.DataColumn("prix_abonnement", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnprix_abonnement)
             Me.columnregistration_date = New Global.System.Data.DataColumn("registration_date", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnregistration_date)
             Me.columnmois_payer = New Global.System.Data.DataColumn("mois_payer", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnmois_payer)
             Me.columnUname = New Global.System.Data.DataColumn("Uname", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnUname)
-            Me.columnprix_abonnement = New Global.System.Data.DataColumn("prix_abonnement", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnprix_abonnement)
             Me.columntoday = New Global.System.Data.DataColumn("today", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columntoday)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnID_users, Me.columnUname}, true))
@@ -1471,12 +1452,12 @@ Partial Public Class gymdataDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property _N_() As Integer
+        Public Property N() As Integer
             Get
-                Return CType(Me(Me.tableadmin._N_Column),Integer)
+                Return CType(Me(Me.tableadmin.NColumn),Integer)
             End Get
             Set
-                Me(Me.tableadmin._N_Column) = value
+                Me(Me.tableadmin.NColumn) = value
             End Set
         End Property
         
@@ -1548,17 +1529,6 @@ Partial Public Class gymdataDataSet
             End Get
             Set
                 Me(Me.tableadmin.TelephoneColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property N() As Integer
-            Get
-                Return CType(Me(Me.tableadmin.NColumn),Integer)
-            End Get
-            Set
-                Me(Me.tableadmin.NColumn) = value
             End Set
         End Property
         
@@ -1709,6 +1679,21 @@ Partial Public Class gymdataDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property prix_abonnement() As Decimal
+            Get
+                Try 
+                    Return CType(Me(Me.tableuser.prix_abonnementColumn),Decimal)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'prix_abonnement' in table 'user' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableuser.prix_abonnementColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property registration_date() As Date
             Get
                 Try 
@@ -1745,21 +1730,6 @@ Partial Public Class gymdataDataSet
             End Get
             Set
                 Me(Me.tableuser.UnameColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property prix_abonnement() As Decimal
-            Get
-                Try 
-                    Return CType(Me(Me.tableuser.prix_abonnementColumn),Decimal)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'prix_abonnement' in table 'user' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableuser.prix_abonnementColumn) = value
             End Set
         End Property
         
@@ -1839,6 +1809,18 @@ Partial Public Class gymdataDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isprix_abonnementNull() As Boolean
+            Return Me.IsNull(Me.tableuser.prix_abonnementColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setprix_abonnementNull()
+            Me(Me.tableuser.prix_abonnementColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function Isregistration_dateNull() As Boolean
             Return Me.IsNull(Me.tableuser.registration_dateColumn)
         End Function
@@ -1859,18 +1841,6 @@ Partial Public Class gymdataDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub Setmois_payerNull()
             Me(Me.tableuser.mois_payerColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function Isprix_abonnementNull() As Boolean
-            Return Me.IsNull(Me.tableuser.prix_abonnementColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub Setprix_abonnementNull()
-            Me(Me.tableuser.prix_abonnementColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2383,21 +2353,21 @@ Namespace gymdataDataSetTableAdapters
             Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
             tableMapping.SourceTable = "Table"
             tableMapping.DataSetTable = "admin"
-            tableMapping.ColumnMappings.Add("N°", "N°")
+            tableMapping.ColumnMappings.Add("N", "N")
             tableMapping.ColumnMappings.Add("Uname", "Uname")
             tableMapping.ColumnMappings.Add("pass", "pass")
             tableMapping.ColumnMappings.Add("Nom", "Nom")
             tableMapping.ColumnMappings.Add("Prenom", "Prenom")
             tableMapping.ColumnMappings.Add("Telephone", "Telephone")
-            tableMapping.ColumnMappings.Add("N", "N")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
-            Me._adapter.DeleteCommand.CommandText = "DELETE FROM `admin` WHERE ((`Uname` = ?) AND ((? = 1 AND `pass` IS NULL) OR (`pas"& _ 
-                "s` = ?)) AND ((? = 1 AND `Nom` IS NULL) OR (`Nom` = ?)) AND ((? = 1 AND `Prenom`"& _ 
-                " IS NULL) OR (`Prenom` = ?)) AND ((? = 1 AND `Telephone` IS NULL) OR (`Telephone"& _ 
-                "` = ?)) AND (`N` = ?))"
+            Me._adapter.DeleteCommand.CommandText = "DELETE FROM `admin` WHERE ((`N` = ?) AND (`Uname` = ?) AND ((? = 1 AND `pass` IS "& _ 
+                "NULL) OR (`pass` = ?)) AND ((? = 1 AND `Nom` IS NULL) OR (`Nom` = ?)) AND ((? = "& _ 
+                "1 AND `Prenom` IS NULL) OR (`Prenom` = ?)) AND ((? = 1 AND `Telephone` IS NULL) "& _ 
+                "OR (`Telephone` = ?)))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_N", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "N", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Uname", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Uname", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_pass", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "pass", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_pass", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "pass", Global.System.Data.DataRowVersion.Original, false, Nothing))
@@ -2407,7 +2377,6 @@ Namespace gymdataDataSetTableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Prenom", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Prenom", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Telephone", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Telephone", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Telephone", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Telephone", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_N", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "N", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.InsertCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
             Me._adapter.InsertCommand.CommandText = "INSERT INTO `admin` (`Uname`, `pass`, `Nom`, `Prenom`, `Telephone`) VALUES (?, ?,"& _ 
@@ -2421,16 +2390,17 @@ Namespace gymdataDataSetTableAdapters
             Me._adapter.UpdateCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
             Me._adapter.UpdateCommand.CommandText = "UPDATE `admin` SET `Uname` = ?, `pass` = ?, `Nom` = ?, `Prenom` = ?, `Telephone` "& _ 
-                "= ? WHERE ((`Uname` = ?) AND ((? = 1 AND `pass` IS NULL) OR (`pass` = ?)) AND (("& _ 
-                "? = 1 AND `Nom` IS NULL) OR (`Nom` = ?)) AND ((? = 1 AND `Prenom` IS NULL) OR (`"& _ 
-                "Prenom` = ?)) AND ((? = 1 AND `Telephone` IS NULL) OR (`Telephone` = ?)) AND (`N"& _ 
-                "` = ?))"
+                "= ? WHERE ((`N` = ?) AND (`Uname` = ?) AND ((? = 1 AND `pass` IS NULL) OR (`pass"& _ 
+                "` = ?)) AND ((? = 1 AND `Nom` IS NULL) OR (`Nom` = ?)) AND ((? = 1 AND `Prenom` "& _ 
+                "IS NULL) OR (`Prenom` = ?)) AND ((? = 1 AND `Telephone` IS NULL) OR (`Telephone`"& _ 
+                " = ?)))"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Uname", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Uname", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("pass", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "pass", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Nom", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Nom", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Prenom", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Prenom", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Telephone", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Telephone", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_N", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "N", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Uname", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Uname", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_pass", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "pass", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_pass", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "pass", Global.System.Data.DataRowVersion.Original, false, Nothing))
@@ -2440,14 +2410,13 @@ Namespace gymdataDataSetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Prenom", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Prenom", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Telephone", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Telephone", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Telephone", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Telephone", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_N", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "N", Global.System.Data.DataRowVersion.Original, false, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitConnection()
             Me._connection = New Global.System.Data.OleDb.OleDbConnection()
-            Me._connection.ConnectionString = Global.gym.My.MySettings.Default.gymdataConnectionString
+            Me._connection.ConnectionString = Global.gym.My.MySettings.Default.gymdata
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2456,7 +2425,7 @@ Namespace gymdataDataSetTableAdapters
             Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT [N°], Uname, pass, Nom, Prenom, Telephone, N FROM admin"
+            Me._commandCollection(0).CommandText = "SELECT N, Uname, pass, Nom, Prenom, Telephone FROM admin"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -2516,41 +2485,41 @@ Namespace gymdataDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_Uname As String, ByVal Original_pass As String, ByVal Original_Nom As String, ByVal Original_Prenom As String, ByVal Original_Telephone As String, ByVal Original_N As Integer) As Integer
+        Public Overloads Overridable Function Delete(ByVal Original_N As Integer, ByVal Original_Uname As String, ByVal Original_pass As String, ByVal Original_Nom As String, ByVal Original_Prenom As String, ByVal Original_Telephone As String) As Integer
+            Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_N,Integer)
             If (Original_Uname Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_Uname")
             Else
-                Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_Uname,String)
+                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(Original_Uname,String)
             End If
             If (Original_pass Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(2).Value = Global.System.DBNull.Value
+                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(3).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_pass,String)
+                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(Original_pass,String)
             End If
             If (Original_Nom Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(4).Value = Global.System.DBNull.Value
+                Me.Adapter.DeleteCommand.Parameters(4).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(5).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(4).Value = CType(Original_Nom,String)
+                Me.Adapter.DeleteCommand.Parameters(4).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(5).Value = CType(Original_Nom,String)
             End If
             If (Original_Prenom Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(5).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(6).Value = Global.System.DBNull.Value
+                Me.Adapter.DeleteCommand.Parameters(6).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(7).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.DeleteCommand.Parameters(5).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(6).Value = CType(Original_Prenom,String)
+                Me.Adapter.DeleteCommand.Parameters(6).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(7).Value = CType(Original_Prenom,String)
             End If
             If (Original_Telephone Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(7).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(8).Value = Global.System.DBNull.Value
+                Me.Adapter.DeleteCommand.Parameters(8).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(9).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.DeleteCommand.Parameters(7).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(8).Value = CType(Original_Telephone,String)
+                Me.Adapter.DeleteCommand.Parameters(8).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(9).Value = CType(Original_Telephone,String)
             End If
-            Me.Adapter.DeleteCommand.Parameters(9).Value = CType(Original_N,Integer)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -2615,7 +2584,7 @@ Namespace gymdataDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal Uname As String, ByVal pass As String, ByVal Nom As String, ByVal Prenom As String, ByVal Telephone As String, ByVal Original_Uname As String, ByVal Original_pass As String, ByVal Original_Nom As String, ByVal Original_Prenom As String, ByVal Original_Telephone As String, ByVal Original_N As Integer) As Integer
+        Public Overloads Overridable Function Update(ByVal Uname As String, ByVal pass As String, ByVal Nom As String, ByVal Prenom As String, ByVal Telephone As String, ByVal Original_N As Integer, ByVal Original_Uname As String, ByVal Original_pass As String, ByVal Original_Nom As String, ByVal Original_Prenom As String, ByVal Original_Telephone As String) As Integer
             If (Uname Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Uname")
             Else
@@ -2641,40 +2610,40 @@ Namespace gymdataDataSetTableAdapters
             Else
                 Me.Adapter.UpdateCommand.Parameters(4).Value = CType(Telephone,String)
             End If
+            Me.Adapter.UpdateCommand.Parameters(5).Value = CType(Original_N,Integer)
             If (Original_Uname Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_Uname")
             Else
-                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(Original_Uname,String)
+                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Original_Uname,String)
             End If
             If (Original_pass Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(7).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(8).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Original_pass,String)
+                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Original_pass,String)
             End If
             If (Original_Nom Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(9).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(10).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(Original_Nom,String)
+                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Original_Nom,String)
             End If
             If (Original_Prenom Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(11).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(12).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(Original_Prenom,String)
+                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(Original_Prenom,String)
             End If
             If (Original_Telephone Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(13).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(14).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(Original_Telephone,String)
+                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(Original_Telephone,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(14).Value = CType(Original_N,Integer)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -2694,8 +2663,8 @@ Namespace gymdataDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal pass As String, ByVal Nom As String, ByVal Prenom As String, ByVal Telephone As String, ByVal Original_Uname As String, ByVal Original_pass As String, ByVal Original_Nom As String, ByVal Original_Prenom As String, ByVal Original_Telephone As String, ByVal Original_N As Integer) As Integer
-            Return Me.Update(Original_Uname, pass, Nom, Prenom, Telephone, Original_Uname, Original_pass, Original_Nom, Original_Prenom, Original_Telephone, Original_N)
+        Public Overloads Overridable Function Update(ByVal pass As String, ByVal Nom As String, ByVal Prenom As String, ByVal Telephone As String, ByVal Original_N As Integer, ByVal Original_Uname As String, ByVal Original_pass As String, ByVal Original_Nom As String, ByVal Original_Prenom As String, ByVal Original_Telephone As String) As Integer
+            Return Me.Update(Original_Uname, pass, Nom, Prenom, Telephone, Original_N, Original_Uname, Original_pass, Original_Nom, Original_Prenom, Original_Telephone)
         End Function
     End Class
     
@@ -2831,10 +2800,10 @@ Namespace gymdataDataSetTableAdapters
             tableMapping.ColumnMappings.Add("last_name", "last_name")
             tableMapping.ColumnMappings.Add("sexe", "sexe")
             tableMapping.ColumnMappings.Add("phone", "phone")
+            tableMapping.ColumnMappings.Add("prix_abonnement", "prix_abonnement")
             tableMapping.ColumnMappings.Add("registration_date", "registration_date")
             tableMapping.ColumnMappings.Add("mois_payer", "mois_payer")
             tableMapping.ColumnMappings.Add("Uname", "Uname")
-            tableMapping.ColumnMappings.Add("prix_abonnement", "prix_abonnement")
             tableMapping.ColumnMappings.Add("today", "today")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.OleDb.OleDbCommand()
@@ -2842,10 +2811,10 @@ Namespace gymdataDataSetTableAdapters
             Me._adapter.DeleteCommand.CommandText = "DELETE FROM `user` WHERE ((`ID_users` = ?) AND ((? = 1 AND `first_name` IS NULL) "& _ 
                 "OR (`first_name` = ?)) AND ((? = 1 AND `last_name` IS NULL) OR (`last_name` = ?)"& _ 
                 ") AND ((? = 1 AND `sexe` IS NULL) OR (`sexe` = ?)) AND ((? = 1 AND `phone` IS NU"& _ 
-                "LL) OR (`phone` = ?)) AND ((? = 1 AND `registration_date` IS NULL) OR (`registra"& _ 
-                "tion_date` = ?)) AND ((? = 1 AND `mois_payer` IS NULL) OR (`mois_payer` = ?)) AN"& _ 
-                "D (`Uname` = ?) AND ((? = 1 AND `prix_abonnement` IS NULL) OR (`prix_abonnement`"& _ 
-                " = ?)) AND ((? = 1 AND `today` IS NULL) OR (`today` = ?)))"
+                "LL) OR (`phone` = ?)) AND ((? = 1 AND `prix_abonnement` IS NULL) OR (`prix_abonn"& _ 
+                "ement` = ?)) AND ((? = 1 AND `registration_date` IS NULL) OR (`registration_date"& _ 
+                "` = ?)) AND ((? = 1 AND `mois_payer` IS NULL) OR (`mois_payer` = ?)) AND (`Uname"& _ 
+                "` = ?) AND ((? = 1 AND `today` IS NULL) OR (`today` = ?)))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_ID_users", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ID_users", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_first_name", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "first_name", Global.System.Data.DataRowVersion.Original, true, Nothing))
@@ -2856,50 +2825,50 @@ Namespace gymdataDataSetTableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_sexe", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "sexe", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_phone", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "phone", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_phone", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "phone", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_prix_abonnement", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "prix_abonnement", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_prix_abonnement", Global.System.Data.OleDb.OleDbType.Currency, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "prix_abonnement", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_registration_date", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "registration_date", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_registration_date", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "registration_date", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_mois_payer", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "mois_payer", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_mois_payer", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "mois_payer", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Uname", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Uname", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_prix_abonnement", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "prix_abonnement", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_prix_abonnement", Global.System.Data.OleDb.OleDbType.Currency, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "prix_abonnement", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_today", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "today", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_today", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "today", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.InsertCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO `user` (`first_name`, `last_name`, `sexe`, `phone`, `registration_dat"& _ 
-                "e`, `mois_payer`, `Uname`, `prix_abonnement`, `today`) VALUES (?, ?, ?, ?, ?, ?,"& _ 
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO `user` (`first_name`, `last_name`, `sexe`, `phone`, `prix_abonnement`"& _ 
+                ", `registration_date`, `mois_payer`, `Uname`, `today`) VALUES (?, ?, ?, ?, ?, ?,"& _ 
                 " ?, ?, ?)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("first_name", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "first_name", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("last_name", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "last_name", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("sexe", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "sexe", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("phone", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "phone", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("prix_abonnement", Global.System.Data.OleDb.OleDbType.Currency, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "prix_abonnement", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("registration_date", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "registration_date", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("mois_payer", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "mois_payer", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Uname", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Uname", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("prix_abonnement", Global.System.Data.OleDb.OleDbType.Currency, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "prix_abonnement", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("today", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "today", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE `user` SET `first_name` = ?, `last_name` = ?, `sexe` = ?, `phone` = ?, `re"& _ 
-                "gistration_date` = ?, `mois_payer` = ?, `Uname` = ?, `prix_abonnement` = ?, `tod"& _ 
+            Me._adapter.UpdateCommand.CommandText = "UPDATE `user` SET `first_name` = ?, `last_name` = ?, `sexe` = ?, `phone` = ?, `pr"& _ 
+                "ix_abonnement` = ?, `registration_date` = ?, `mois_payer` = ?, `Uname` = ?, `tod"& _ 
                 "ay` = ? WHERE ((`ID_users` = ?) AND ((? = 1 AND `first_name` IS NULL) OR (`first"& _ 
                 "_name` = ?)) AND ((? = 1 AND `last_name` IS NULL) OR (`last_name` = ?)) AND ((? "& _ 
                 "= 1 AND `sexe` IS NULL) OR (`sexe` = ?)) AND ((? = 1 AND `phone` IS NULL) OR (`p"& _ 
-                "hone` = ?)) AND ((? = 1 AND `registration_date` IS NULL) OR (`registration_date`"& _ 
-                " = ?)) AND ((? = 1 AND `mois_payer` IS NULL) OR (`mois_payer` = ?)) AND (`Uname`"& _ 
-                " = ?) AND ((? = 1 AND `prix_abonnement` IS NULL) OR (`prix_abonnement` = ?)) AND"& _ 
+                "hone` = ?)) AND ((? = 1 AND `prix_abonnement` IS NULL) OR (`prix_abonnement` = ?"& _ 
+                ")) AND ((? = 1 AND `registration_date` IS NULL) OR (`registration_date` = ?)) AN"& _ 
+                "D ((? = 1 AND `mois_payer` IS NULL) OR (`mois_payer` = ?)) AND (`Uname` = ?) AND"& _ 
                 " ((? = 1 AND `today` IS NULL) OR (`today` = ?)))"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("first_name", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "first_name", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("last_name", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "last_name", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("sexe", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "sexe", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("phone", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "phone", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("prix_abonnement", Global.System.Data.OleDb.OleDbType.Currency, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "prix_abonnement", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("registration_date", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "registration_date", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("mois_payer", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "mois_payer", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Uname", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Uname", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("prix_abonnement", Global.System.Data.OleDb.OleDbType.Currency, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "prix_abonnement", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("today", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "today", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_ID_users", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ID_users", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_first_name", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "first_name", Global.System.Data.DataRowVersion.Original, true, Nothing))
@@ -2910,13 +2879,13 @@ Namespace gymdataDataSetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_sexe", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "sexe", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_phone", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "phone", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_phone", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "phone", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_prix_abonnement", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "prix_abonnement", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_prix_abonnement", Global.System.Data.OleDb.OleDbType.Currency, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "prix_abonnement", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_registration_date", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "registration_date", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_registration_date", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "registration_date", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_mois_payer", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "mois_payer", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_mois_payer", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "mois_payer", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Uname", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Uname", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_prix_abonnement", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "prix_abonnement", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_prix_abonnement", Global.System.Data.OleDb.OleDbType.Currency, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "prix_abonnement", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_today", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "today", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_today", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "today", Global.System.Data.DataRowVersion.Original, false, Nothing))
         End Sub
@@ -2925,7 +2894,7 @@ Namespace gymdataDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitConnection()
             Me._connection = New Global.System.Data.OleDb.OleDbConnection()
-            Me._connection.ConnectionString = Global.gym.My.MySettings.Default.gymdataConnectionString
+            Me._connection.ConnectionString = Global.gym.My.MySettings.Default.gymdata
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2934,8 +2903,8 @@ Namespace gymdataDataSetTableAdapters
             Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT ID_users, first_name, last_name, sexe, phone, registration_date, mois_paye"& _ 
-                "r, Uname, prix_abonnement, today FROM [user]"
+            Me._commandCollection(0).CommandText = "SELECT ID_users, first_name, last_name, sexe, phone, prix_abonnement, registratio"& _ 
+                "n_date, mois_payer, Uname, today FROM [user]"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -2995,7 +2964,7 @@ Namespace gymdataDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_ID_users As Integer, ByVal Original_first_name As String, ByVal Original_last_name As String, ByVal Original_sexe As String, ByVal Original_phone As String, ByVal Original_registration_date As Global.System.Nullable(Of Date), ByVal Original_mois_payer As Global.System.Nullable(Of Integer), ByVal Original_Uname As String, ByVal Original_prix_abonnement As Global.System.Nullable(Of Decimal), ByVal Original_today As Global.System.Nullable(Of Date)) As Integer
+        Public Overloads Overridable Function Delete(ByVal Original_ID_users As Integer, ByVal Original_first_name As String, ByVal Original_last_name As String, ByVal Original_sexe As String, ByVal Original_phone As String, ByVal Original_prix_abonnement As Global.System.Nullable(Of Decimal), ByVal Original_registration_date As Global.System.Nullable(Of Date), ByVal Original_mois_payer As Global.System.Nullable(Of Integer), ByVal Original_Uname As String, ByVal Original_today As Global.System.Nullable(Of Date)) As Integer
             Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_ID_users,Integer)
             If (Original_first_name Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(1).Value = CType(1,Object)
@@ -3025,31 +2994,31 @@ Namespace gymdataDataSetTableAdapters
                 Me.Adapter.DeleteCommand.Parameters(7).Value = CType(0,Object)
                 Me.Adapter.DeleteCommand.Parameters(8).Value = CType(Original_phone,String)
             End If
-            If (Original_registration_date.HasValue = true) Then
+            If (Original_prix_abonnement.HasValue = true) Then
                 Me.Adapter.DeleteCommand.Parameters(9).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(10).Value = CType(Original_registration_date.Value,Date)
+                Me.Adapter.DeleteCommand.Parameters(10).Value = CType(Original_prix_abonnement.Value,Decimal)
             Else
                 Me.Adapter.DeleteCommand.Parameters(9).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(10).Value = Global.System.DBNull.Value
             End If
-            If (Original_mois_payer.HasValue = true) Then
+            If (Original_registration_date.HasValue = true) Then
                 Me.Adapter.DeleteCommand.Parameters(11).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(12).Value = CType(Original_mois_payer.Value,Integer)
+                Me.Adapter.DeleteCommand.Parameters(12).Value = CType(Original_registration_date.Value,Date)
             Else
                 Me.Adapter.DeleteCommand.Parameters(11).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(12).Value = Global.System.DBNull.Value
             End If
+            If (Original_mois_payer.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(13).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(14).Value = CType(Original_mois_payer.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(13).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(14).Value = Global.System.DBNull.Value
+            End If
             If (Original_Uname Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_Uname")
             Else
-                Me.Adapter.DeleteCommand.Parameters(13).Value = CType(Original_Uname,String)
-            End If
-            If (Original_prix_abonnement.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(14).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(15).Value = CType(Original_prix_abonnement.Value,Decimal)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(14).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(15).Value = Global.System.DBNull.Value
+                Me.Adapter.DeleteCommand.Parameters(15).Value = CType(Original_Uname,String)
             End If
             If (Original_today.HasValue = true) Then
                 Me.Adapter.DeleteCommand.Parameters(16).Value = CType(0,Object)
@@ -3077,7 +3046,7 @@ Namespace gymdataDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal first_name As String, ByVal last_name As String, ByVal sexe As String, ByVal phone As String, ByVal registration_date As Global.System.Nullable(Of Date), ByVal mois_payer As Global.System.Nullable(Of Integer), ByVal Uname As String, ByVal prix_abonnement As Global.System.Nullable(Of Decimal), ByVal today As Global.System.Nullable(Of Date)) As Integer
+        Public Overloads Overridable Function Insert(ByVal first_name As String, ByVal last_name As String, ByVal sexe As String, ByVal phone As String, ByVal prix_abonnement As Global.System.Nullable(Of Decimal), ByVal registration_date As Global.System.Nullable(Of Date), ByVal mois_payer As Global.System.Nullable(Of Integer), ByVal Uname As String, ByVal today As Global.System.Nullable(Of Date)) As Integer
             If (first_name Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
@@ -3098,25 +3067,25 @@ Namespace gymdataDataSetTableAdapters
             Else
                 Me.Adapter.InsertCommand.Parameters(3).Value = CType(phone,String)
             End If
-            If (registration_date.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(4).Value = CType(registration_date.Value,Date)
+            If (prix_abonnement.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(4).Value = CType(prix_abonnement.Value,Decimal)
             Else
                 Me.Adapter.InsertCommand.Parameters(4).Value = Global.System.DBNull.Value
             End If
-            If (mois_payer.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(5).Value = CType(mois_payer.Value,Integer)
+            If (registration_date.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(5).Value = CType(registration_date.Value,Date)
             Else
                 Me.Adapter.InsertCommand.Parameters(5).Value = Global.System.DBNull.Value
+            End If
+            If (mois_payer.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(6).Value = CType(mois_payer.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(6).Value = Global.System.DBNull.Value
             End If
             If (Uname Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Uname")
             Else
-                Me.Adapter.InsertCommand.Parameters(6).Value = CType(Uname,String)
-            End If
-            If (prix_abonnement.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(7).Value = CType(prix_abonnement.Value,Decimal)
-            Else
-                Me.Adapter.InsertCommand.Parameters(7).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(7).Value = CType(Uname,String)
             End If
             If (today.HasValue = true) Then
                 Me.Adapter.InsertCommand.Parameters(8).Value = CType(today.Value,Date)
@@ -3147,20 +3116,20 @@ Namespace gymdataDataSetTableAdapters
                     ByVal last_name As String,  _
                     ByVal sexe As String,  _
                     ByVal phone As String,  _
+                    ByVal prix_abonnement As Global.System.Nullable(Of Decimal),  _
                     ByVal registration_date As Global.System.Nullable(Of Date),  _
                     ByVal mois_payer As Global.System.Nullable(Of Integer),  _
                     ByVal Uname As String,  _
-                    ByVal prix_abonnement As Global.System.Nullable(Of Decimal),  _
                     ByVal today As Global.System.Nullable(Of Date),  _
                     ByVal Original_ID_users As Integer,  _
                     ByVal Original_first_name As String,  _
                     ByVal Original_last_name As String,  _
                     ByVal Original_sexe As String,  _
                     ByVal Original_phone As String,  _
+                    ByVal Original_prix_abonnement As Global.System.Nullable(Of Decimal),  _
                     ByVal Original_registration_date As Global.System.Nullable(Of Date),  _
                     ByVal Original_mois_payer As Global.System.Nullable(Of Integer),  _
                     ByVal Original_Uname As String,  _
-                    ByVal Original_prix_abonnement As Global.System.Nullable(Of Decimal),  _
                     ByVal Original_today As Global.System.Nullable(Of Date)) As Integer
             If (first_name Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(0).Value = Global.System.DBNull.Value
@@ -3182,25 +3151,25 @@ Namespace gymdataDataSetTableAdapters
             Else
                 Me.Adapter.UpdateCommand.Parameters(3).Value = CType(phone,String)
             End If
-            If (registration_date.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(registration_date.Value,Date)
+            If (prix_abonnement.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(prix_abonnement.Value,Decimal)
             Else
                 Me.Adapter.UpdateCommand.Parameters(4).Value = Global.System.DBNull.Value
             End If
-            If (mois_payer.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(mois_payer.Value,Integer)
+            If (registration_date.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(registration_date.Value,Date)
             Else
                 Me.Adapter.UpdateCommand.Parameters(5).Value = Global.System.DBNull.Value
+            End If
+            If (mois_payer.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(mois_payer.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(6).Value = Global.System.DBNull.Value
             End If
             If (Uname Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Uname")
             Else
-                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Uname,String)
-            End If
-            If (prix_abonnement.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(prix_abonnement.Value,Decimal)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(7).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Uname,String)
             End If
             If (today.HasValue = true) Then
                 Me.Adapter.UpdateCommand.Parameters(8).Value = CType(today.Value,Date)
@@ -3236,31 +3205,31 @@ Namespace gymdataDataSetTableAdapters
                 Me.Adapter.UpdateCommand.Parameters(16).Value = CType(0,Object)
                 Me.Adapter.UpdateCommand.Parameters(17).Value = CType(Original_phone,String)
             End If
-            If (Original_registration_date.HasValue = true) Then
+            If (Original_prix_abonnement.HasValue = true) Then
                 Me.Adapter.UpdateCommand.Parameters(18).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(Original_registration_date.Value,Date)
+                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(Original_prix_abonnement.Value,Decimal)
             Else
                 Me.Adapter.UpdateCommand.Parameters(18).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(19).Value = Global.System.DBNull.Value
             End If
-            If (Original_mois_payer.HasValue = true) Then
+            If (Original_registration_date.HasValue = true) Then
                 Me.Adapter.UpdateCommand.Parameters(20).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(Original_mois_payer.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(Original_registration_date.Value,Date)
             Else
                 Me.Adapter.UpdateCommand.Parameters(20).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(21).Value = Global.System.DBNull.Value
             End If
+            If (Original_mois_payer.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(Original_mois_payer.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(23).Value = Global.System.DBNull.Value
+            End If
             If (Original_Uname Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_Uname")
             Else
-                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(Original_Uname,String)
-            End If
-            If (Original_prix_abonnement.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(Original_prix_abonnement.Value,Decimal)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(24).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(Original_Uname,String)
             End If
             If (Original_today.HasValue = true) Then
                 Me.Adapter.UpdateCommand.Parameters(25).Value = CType(0,Object)
@@ -3293,21 +3262,21 @@ Namespace gymdataDataSetTableAdapters
                     ByVal last_name As String,  _
                     ByVal sexe As String,  _
                     ByVal phone As String,  _
+                    ByVal prix_abonnement As Global.System.Nullable(Of Decimal),  _
                     ByVal registration_date As Global.System.Nullable(Of Date),  _
                     ByVal mois_payer As Global.System.Nullable(Of Integer),  _
-                    ByVal prix_abonnement As Global.System.Nullable(Of Decimal),  _
                     ByVal today As Global.System.Nullable(Of Date),  _
                     ByVal Original_ID_users As Integer,  _
                     ByVal Original_first_name As String,  _
                     ByVal Original_last_name As String,  _
                     ByVal Original_sexe As String,  _
                     ByVal Original_phone As String,  _
+                    ByVal Original_prix_abonnement As Global.System.Nullable(Of Decimal),  _
                     ByVal Original_registration_date As Global.System.Nullable(Of Date),  _
                     ByVal Original_mois_payer As Global.System.Nullable(Of Integer),  _
                     ByVal Original_Uname As String,  _
-                    ByVal Original_prix_abonnement As Global.System.Nullable(Of Decimal),  _
                     ByVal Original_today As Global.System.Nullable(Of Date)) As Integer
-            Return Me.Update(first_name, last_name, sexe, phone, registration_date, mois_payer, Original_Uname, prix_abonnement, today, Original_ID_users, Original_first_name, Original_last_name, Original_sexe, Original_phone, Original_registration_date, Original_mois_payer, Original_Uname, Original_prix_abonnement, Original_today)
+            Return Me.Update(first_name, last_name, sexe, phone, prix_abonnement, registration_date, mois_payer, Original_Uname, today, Original_ID_users, Original_first_name, Original_last_name, Original_sexe, Original_phone, Original_prix_abonnement, Original_registration_date, Original_mois_payer, Original_Uname, Original_today)
         End Function
     End Class
     
@@ -3454,7 +3423,7 @@ Namespace gymdataDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitConnection()
             Me._connection = New Global.System.Data.OleDb.OleDbConnection()
-            Me._connection.ConnectionString = Global.gym.My.MySettings.Default.gymdataConnectionString
+            Me._connection.ConnectionString = Global.gym.My.MySettings.Default.gymdata
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
