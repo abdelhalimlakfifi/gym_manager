@@ -34,7 +34,6 @@ Partial Class AdminForm
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -141,29 +140,18 @@ Partial Class AdminForm
         '
         Me.Button1.BackColor = System.Drawing.Color.LightSkyBlue
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button1.Location = New System.Drawing.Point(142, 353)
+        Me.Button1.Location = New System.Drawing.Point(252, 353)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(125, 30)
         Me.Button1.TabIndex = 11
         Me.Button1.Text = "Save"
         Me.Button1.UseVisualStyleBackColor = False
         '
-        'Button2
-        '
-        Me.Button2.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button2.Location = New System.Drawing.Point(333, 353)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(125, 30)
-        Me.Button2.TabIndex = 12
-        Me.Button2.Text = "Update"
-        Me.Button2.UseVisualStyleBackColor = False
-        '
         'Button3
         '
         Me.Button3.BackColor = System.Drawing.Color.LightSkyBlue
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button3.Location = New System.Drawing.Point(514, 353)
+        Me.Button3.Location = New System.Drawing.Point(416, 353)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(125, 30)
         Me.Button3.TabIndex = 13
@@ -208,7 +196,6 @@ Partial Class AdminForm
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.TextBox6)
         Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.TextBox5)
         Me.Controls.Add(Me.Label5)
@@ -241,7 +228,6 @@ Partial Class AdminForm
     Friend WithEvents TextBox5 As System.Windows.Forms.TextBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents TextBox6 As System.Windows.Forms.TextBox
     Friend WithEvents Label6 As System.Windows.Forms.Label
