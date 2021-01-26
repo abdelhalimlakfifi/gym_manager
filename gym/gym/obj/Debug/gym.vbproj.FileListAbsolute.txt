@@ -154,3 +154,7 @@ C:\Users\ANDROID12-54\Desktop\partage\SALINA LAST MODIF\gym_manager\gym\gym\bin\
 C:\Users\ANDROID12-54\Desktop\partage\SALINA LAST MODIF\gym_manager\gym\gym\obj\Debug\gym.exe
 C:\Users\ANDROID12-54\Desktop\partage\SALINA LAST MODIF\gym_manager\gym\gym\obj\Debug\gym.xml
 C:\Users\ANDROID12-54\Desktop\partage\SALINA LAST MODIF\gym_manager\gym\gym\obj\Debug\gym.pdb
+C:\Users\ANDROID12-54\Desktop\partage\New folder\gym_manager\gym\gym\bin\Debug\gym.exe.config
+C:\Users\ANDROID12-54\Desktop\partage\New folder\gym_manager\gym\gym\obj\Debug\gym.exe
+C:\Users\ANDROID12-54\Desktop\partage\New folder\gym_manager\gym\gym\obj\Debug\gym.xml
+C:\Users\ANDROID12-54\Desktop\partage\New folder\gym_manager\gym\gym\obj\Debug\gym.pdb
