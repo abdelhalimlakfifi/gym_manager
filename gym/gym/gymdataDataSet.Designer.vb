@@ -31,8 +31,6 @@ Partial Public Class gymdataDataSet
     
     Private tableblacklist As blacklistDataTable
     
-    Private relationadminuser As Global.System.Data.DataRelation
-    
     Private _schemaSerializationMode As Global.System.Data.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -244,7 +242,6 @@ Partial Public Class gymdataDataSet
                 Me.tableblacklist.InitVars
             End If
         End If
-        Me.relationadminuser = Me.Relations("adminuser")
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -261,8 +258,6 @@ Partial Public Class gymdataDataSet
         MyBase.Tables.Add(Me.tableuser)
         Me.tableblacklist = New blacklistDataTable()
         MyBase.Tables.Add(Me.tableblacklist)
-        Me.relationadminuser = New Global.System.Data.DataRelation("adminuser", New Global.System.Data.DataColumn() {Me.tableadmin.UnameColumn}, New Global.System.Data.DataColumn() {Me.tableuser.UnameColumn}, false)
-        Me.Relations.Add(Me.relationadminuser)
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -864,12 +859,9 @@ Partial Public Class gymdataDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function AdduserRow(ByVal first_name As String, ByVal last_name As String, ByVal sexe As String, ByVal phone As String, ByVal prix_abonnement As Decimal, ByVal registration_date As Date, ByVal mois_payer As Integer, ByVal parentadminRowByadminuser As adminRow, ByVal today As Date) As userRow
+        Public Overloads Function AdduserRow(ByVal first_name As String, ByVal last_name As String, ByVal sexe As String, ByVal phone As String, ByVal prix_abonnement As Decimal, ByVal registration_date As Date, ByVal mois_payer As Integer, ByVal Uname As String, ByVal today As Date) As userRow
             Dim rowuserRow As userRow = CType(Me.NewRow,userRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, first_name, last_name, sexe, phone, prix_abonnement, registration_date, mois_payer, Nothing, today}
-            If (Not (parentadminRowByadminuser) Is Nothing) Then
-                columnValuesArray(8) = parentadminRowByadminuser(1)
-            End If
+            Dim columnValuesArray() As Object = New Object() {Nothing, first_name, last_name, sexe, phone, prix_abonnement, registration_date, mois_payer, Uname, today}
             rowuserRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowuserRow)
             Return rowuserRow
@@ -1579,16 +1571,6 @@ Partial Public Class gymdataDataSet
         Public Sub SetTelephoneNull()
             Me(Me.tableadmin.TelephoneColumn) = Global.System.Convert.DBNull
         End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function GetuserRows() As userRow()
-            If (Me.Table.ChildRelations("adminuser") Is Nothing) Then
-                Return New userRow(-1) {}
-            Else
-                Return CType(MyBase.GetChildRows(Me.Table.ChildRelations("adminuser")),userRow())
-            End If
-        End Function
     End Class
     
     '''<summary>
@@ -1745,17 +1727,6 @@ Partial Public Class gymdataDataSet
             End Get
             Set
                 Me(Me.tableuser.todayColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property adminRow() As adminRow
-            Get
-                Return CType(Me.GetParentRow(Me.Table.ParentRelations("adminuser")),adminRow)
-            End Get
-            Set
-                Me.SetParentRow(value, Me.Table.ParentRelations("adminuser"))
             End Set
         End Property
         
@@ -2416,7 +2387,7 @@ Namespace gymdataDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitConnection()
             Me._connection = New Global.System.Data.OleDb.OleDbConnection()
-            Me._connection.ConnectionString = Global.gym.My.MySettings.Default.gymdataConnectionString2
+            Me._connection.ConnectionString = Global.gym.My.MySettings.Default.gymdataConnectionString4
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2894,7 +2865,7 @@ Namespace gymdataDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitConnection()
             Me._connection = New Global.System.Data.OleDb.OleDbConnection()
-            Me._connection.ConnectionString = Global.gym.My.MySettings.Default.gymdataConnectionString2
+            Me._connection.ConnectionString = Global.gym.My.MySettings.Default.gymdataConnectionString4
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -3423,7 +3394,7 @@ Namespace gymdataDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitConnection()
             Me._connection = New Global.System.Data.OleDb.OleDbConnection()
-            Me._connection.ConnectionString = Global.gym.My.MySettings.Default.gymdataConnectionString2
+            Me._connection.ConnectionString = Global.gym.My.MySettings.Default.gymdataConnectionString4
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _

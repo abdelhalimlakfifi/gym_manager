@@ -107,6 +107,28 @@ Namespace My
                 Return CType(Me("gymdataConnectionString2"),String)
             End Get
         End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\DATABASE\gymdata.ac"& _ 
+            "cdb")>  _
+        Public ReadOnly Property gymdataConnectionString3() As String
+            Get
+                Return CType(Me("gymdataConnectionString3"),String)
+            End Get
+        End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\bin\Debug\DATABASE\"& _ 
+            "gymdata.accdb")>  _
+        Public ReadOnly Property gymdataConnectionString4() As String
+            Get
+                Return CType(Me("gymdataConnectionString4"),String)
+            End Get
+        End Property
     End Class
 End Namespace
 

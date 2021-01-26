@@ -2,7 +2,7 @@
 Imports System.Data
 
 Public Class Blacklist
-    Dim connections As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\alakf\Desktop\gym2\DATABASE\gymdata.accdb")
+    Dim connections As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\DATABASE\gymdata.accdb")
 
     Private Sub Blacklist_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim sql As String
