@@ -2,7 +2,7 @@
 Imports System.Data
 
 Public Class Form1
-    Dim connections As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\gymdata.accdb")
+    Dim connections As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\alakf\Desktop\gym2\DATABASE\gymdata.accdb")
 
     Private Sub Login_Click(sender As Object, e As EventArgs) Handles Login.Click
 

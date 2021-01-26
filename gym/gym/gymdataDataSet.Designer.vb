@@ -2416,7 +2416,7 @@ Namespace gymdataDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitConnection()
             Me._connection = New Global.System.Data.OleDb.OleDbConnection()
-            Me._connection.ConnectionString = Global.gym.My.MySettings.Default.gymdata
+            Me._connection.ConnectionString = Global.gym.My.MySettings.Default.gymdataConnectionString2
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2894,7 +2894,7 @@ Namespace gymdataDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitConnection()
             Me._connection = New Global.System.Data.OleDb.OleDbConnection()
-            Me._connection.ConnectionString = Global.gym.My.MySettings.Default.gymdata
+            Me._connection.ConnectionString = Global.gym.My.MySettings.Default.gymdataConnectionString2
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -3423,7 +3423,7 @@ Namespace gymdataDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitConnection()
             Me._connection = New Global.System.Data.OleDb.OleDbConnection()
-            Me._connection.ConnectionString = Global.gym.My.MySettings.Default.gymdata
+            Me._connection.ConnectionString = Global.gym.My.MySettings.Default.gymdataConnectionString2
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _

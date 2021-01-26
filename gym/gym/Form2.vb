@@ -9,7 +9,7 @@
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Form1.Close()
         Timer1.Enabled = True
-        switchPanel(aboutUsForm)
+        switchPanel(home)
 
     End Sub
 
@@ -48,5 +48,9 @@
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         Label1.Text = Date.Now.ToString("dd-MM-yyy hh:mm:ss")
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        switchPanel(home)
     End Sub
 End Class

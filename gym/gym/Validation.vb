@@ -2,7 +2,7 @@
 Imports System.Data
 
 Public Class Validation
-    Dim connections As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\gymdata.accdb")
+    Dim connections As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\alakf\Desktop\gym2\DATABASE\gymdata.accdb")
     Private Sub Validation_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         dateBox.Format = DateTimePickerFormat.Short
         Try
@@ -24,17 +24,7 @@ Public Class Validation
         End Try
     End Sub
     Dim n As Integer
-    Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs)
-        n = DataGridView1.CurrentRow.Cells(0).Value
-        nomBox.Text = DataGridView1.CurrentRow.Cells(1).Value
-        prenomBox.Text = DataGridView1.CurrentRow.Cells(2).Value
-        sexeBox.Text = DataGridView1.CurrentRow.Cells(3).Value
-        phoneBox.Text = DataGridView1.CurrentRow.Cells(4).Value
-        prixBox.Text = DataGridView1.CurrentRow.Cells(5).Value
-        dateBox.Text = DataGridView1.CurrentRow.Cells(6).Value
-        moisBox.Text = DataGridView1.CurrentRow.Cells(7).Value
-        adminBox.Text = DataGridView1.CurrentRow.Cells(8).Value
-    End Sub
+    
 
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
 
@@ -148,5 +138,21 @@ Public Class Validation
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
+    End Sub
+
+    Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
+        n = DataGridView1.CurrentRow.Cells(0).Value
+        nomBox.Text = DataGridView1.CurrentRow.Cells(1).Value
+        prenomBox.Text = DataGridView1.CurrentRow.Cells(2).Value
+        sexeBox.Text = DataGridView1.CurrentRow.Cells(3).Value
+        phoneBox.Text = DataGridView1.CurrentRow.Cells(4).Value
+        prixBox.Text = DataGridView1.CurrentRow.Cells(5).Value
+        dateBox.Text = DataGridView1.CurrentRow.Cells(6).Value
+        moisBox.Text = DataGridView1.CurrentRow.Cells(7).Value
+        adminBox.Text = DataGridView1.CurrentRow.Cells(8).Value
+    End Sub
+
+    Private Sub DataGridView1_CellContentClick_1(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+
     End Sub
 End Class
