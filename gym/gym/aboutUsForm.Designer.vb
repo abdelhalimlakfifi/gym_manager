@@ -41,6 +41,9 @@ Partial Class aboutUsForm
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.Panel8 = New System.Windows.Forms.Panel()
         Me.Panel9 = New System.Windows.Forms.Panel()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Panel1
@@ -75,7 +78,7 @@ Partial Class aboutUsForm
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Tahoma", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label1.Location = New System.Drawing.Point(63, 305)
+        Me.Label1.Location = New System.Drawing.Point(63, 174)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(140, 21)
         Me.Label1.TabIndex = 5
@@ -130,7 +133,7 @@ Partial Class aboutUsForm
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Tahoma", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label6.Location = New System.Drawing.Point(366, 305)
+        Me.Label6.Location = New System.Drawing.Point(366, 174)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(127, 21)
         Me.Label6.TabIndex = 11
@@ -190,7 +193,7 @@ Partial Class aboutUsForm
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Tahoma", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label9.Location = New System.Drawing.Point(692, 305)
+        Me.Label9.Location = New System.Drawing.Point(692, 174)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(131, 21)
         Me.Label9.TabIndex = 17
@@ -223,12 +226,48 @@ Partial Class aboutUsForm
         Me.Panel9.Size = New System.Drawing.Size(110, 104)
         Me.Panel9.TabIndex = 14
         '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Traditional Arabic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label10.Location = New System.Drawing.Point(387, 305)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(80, 23)
+        Me.Label10.TabIndex = 20
+        Me.Label10.Text = "Front End"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Traditional Arabic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label11.Location = New System.Drawing.Point(709, 305)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(80, 23)
+        Me.Label11.TabIndex = 21
+        Me.Label11.Text = "Front End"
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Traditional Arabic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label12.Location = New System.Drawing.Point(97, 305)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(74, 23)
+        Me.Label12.TabIndex = 22
+        Me.Label12.Text = "Back End"
+        '
         'aboutUsForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(903, 554)
+        Me.Controls.Add(Me.Label12)
+        Me.Controls.Add(Me.Label11)
+        Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label9)
@@ -273,4 +312,7 @@ Partial Class aboutUsForm
     Friend WithEvents Panel7 As System.Windows.Forms.Panel
     Friend WithEvents Panel8 As System.Windows.Forms.Panel
     Friend WithEvents Panel9 As System.Windows.Forms.Panel
+    Friend WithEvents Label10 As System.Windows.Forms.Label
+    Friend WithEvents Label11 As System.Windows.Forms.Label
+    Friend WithEvents Label12 As System.Windows.Forms.Label
 End Class
