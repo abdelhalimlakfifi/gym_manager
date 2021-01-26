@@ -1,6 +1,10 @@
 ﻿Imports System.Data.OleDb
 Imports System.Data
+
+
+
 Public Class addUserForm
+    Public adminame As String
     Dim con As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\alakf\Desktop\gym2\DATABASE\gymdata.accdb")
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
 
@@ -29,12 +33,12 @@ Public Class addUserForm
             sexeBox.Text = ""
             phoneBox.Text = ""
             prixBox.Text = ""
-            adminBox.Text = ""
+
         End Try
     End Sub
 
     Private Sub addUserForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        adminBox.Text = adminame
         dateBox.Format = DateTimePickerFormat.Short
     End Sub
 

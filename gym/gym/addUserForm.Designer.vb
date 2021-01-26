@@ -51,19 +51,18 @@ Partial Class addUserForm
         '
         'nomBox
         '
-        Me.nomBox.Location = New System.Drawing.Point(263, 93)
-        Me.nomBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.nomBox.Location = New System.Drawing.Point(225, 76)
         Me.nomBox.Name = "nomBox"
-        Me.nomBox.Size = New System.Drawing.Size(179, 24)
+        Me.nomBox.Size = New System.Drawing.Size(154, 20)
         Me.nomBox.TabIndex = 0
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label1.Location = New System.Drawing.Point(50, 100)
+        Me.Label1.Location = New System.Drawing.Point(43, 81)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(37, 17)
+        Me.Label1.Size = New System.Drawing.Size(29, 13)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Nom"
         '
@@ -71,27 +70,26 @@ Partial Class addUserForm
         '
         Me.Label2.AutoSize = True
         Me.Label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label2.Location = New System.Drawing.Point(49, 160)
+        Me.Label2.Location = New System.Drawing.Point(42, 130)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(56, 17)
+        Me.Label2.Size = New System.Drawing.Size(43, 13)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Prenom"
         '
         'prenomBox
         '
-        Me.prenomBox.Location = New System.Drawing.Point(262, 153)
-        Me.prenomBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.prenomBox.Location = New System.Drawing.Point(225, 124)
         Me.prenomBox.Name = "prenomBox"
-        Me.prenomBox.Size = New System.Drawing.Size(179, 24)
+        Me.prenomBox.Size = New System.Drawing.Size(154, 20)
         Me.prenomBox.TabIndex = 2
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label3.Location = New System.Drawing.Point(49, 215)
+        Me.Label3.Location = New System.Drawing.Point(42, 175)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(38, 17)
+        Me.Label3.Size = New System.Drawing.Size(31, 13)
         Me.Label3.TabIndex = 5
         Me.Label3.Text = "Sexe"
         '
@@ -99,45 +97,43 @@ Partial Class addUserForm
         '
         Me.Label4.AutoSize = True
         Me.Label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label4.Location = New System.Drawing.Point(49, 267)
+        Me.Label4.Location = New System.Drawing.Point(42, 217)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(47, 17)
+        Me.Label4.Size = New System.Drawing.Size(38, 13)
         Me.Label4.TabIndex = 7
         Me.Label4.Text = "Phone"
         '
         'phoneBox
         '
-        Me.phoneBox.Location = New System.Drawing.Point(262, 260)
-        Me.phoneBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.phoneBox.Location = New System.Drawing.Point(225, 211)
         Me.phoneBox.Name = "phoneBox"
-        Me.phoneBox.Size = New System.Drawing.Size(179, 24)
+        Me.phoneBox.Size = New System.Drawing.Size(154, 20)
         Me.phoneBox.TabIndex = 6
         '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label5.Location = New System.Drawing.Point(459, 100)
+        Me.Label5.Location = New System.Drawing.Point(393, 81)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(124, 17)
+        Me.Label5.Size = New System.Drawing.Size(94, 13)
         Me.Label5.TabIndex = 9
         Me.Label5.Text = "Prix d'abonnement"
         '
         'prixBox
         '
-        Me.prixBox.Location = New System.Drawing.Point(669, 93)
-        Me.prixBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.prixBox.Location = New System.Drawing.Point(573, 76)
         Me.prixBox.Name = "prixBox"
-        Me.prixBox.Size = New System.Drawing.Size(179, 24)
+        Me.prixBox.Size = New System.Drawing.Size(154, 20)
         Me.prixBox.TabIndex = 8
         '
         'Label6
         '
         Me.Label6.AutoSize = True
         Me.Label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label6.Location = New System.Drawing.Point(458, 160)
+        Me.Label6.Location = New System.Drawing.Point(393, 130)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(142, 17)
+        Me.Label6.Size = New System.Drawing.Size(108, 13)
         Me.Label6.TabIndex = 11
         Me.Label6.Text = "date d'enregistrement"
         '
@@ -145,9 +141,9 @@ Partial Class addUserForm
         '
         Me.Label7.AutoSize = True
         Me.Label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label7.Location = New System.Drawing.Point(458, 215)
+        Me.Label7.Location = New System.Drawing.Point(393, 175)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(73, 17)
+        Me.Label7.Size = New System.Drawing.Size(59, 13)
         Me.Label7.TabIndex = 13
         Me.Label7.Text = "Mois Payer"
         '
@@ -155,54 +151,50 @@ Partial Class addUserForm
         '
         Me.Label8.AutoSize = True
         Me.Label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label8.Location = New System.Drawing.Point(458, 267)
+        Me.Label8.Location = New System.Drawing.Point(393, 217)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(85, 17)
+        Me.Label8.Size = New System.Drawing.Size(67, 13)
         Me.Label8.TabIndex = 15
         Me.Label8.Text = "Admin Name" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
         'adminBox
         '
-        Me.adminBox.Location = New System.Drawing.Point(668, 265)
-        Me.adminBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.adminBox.Enabled = False
+        Me.adminBox.Location = New System.Drawing.Point(573, 215)
         Me.adminBox.Name = "adminBox"
-        Me.adminBox.Size = New System.Drawing.Size(179, 24)
+        Me.adminBox.Size = New System.Drawing.Size(154, 20)
         Me.adminBox.TabIndex = 14
         '
         'sexeBox
         '
         Me.sexeBox.FormattingEnabled = True
         Me.sexeBox.Items.AddRange(New Object() {"Male", "Female"})
-        Me.sexeBox.Location = New System.Drawing.Point(262, 209)
-        Me.sexeBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.sexeBox.Location = New System.Drawing.Point(225, 170)
         Me.sexeBox.Name = "sexeBox"
-        Me.sexeBox.Size = New System.Drawing.Size(179, 24)
+        Me.sexeBox.Size = New System.Drawing.Size(154, 21)
         Me.sexeBox.TabIndex = 16
         '
         'dateBox
         '
-        Me.dateBox.Location = New System.Drawing.Point(668, 159)
-        Me.dateBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.dateBox.Location = New System.Drawing.Point(573, 129)
         Me.dateBox.Name = "dateBox"
-        Me.dateBox.Size = New System.Drawing.Size(179, 24)
+        Me.dateBox.Size = New System.Drawing.Size(154, 20)
         Me.dateBox.TabIndex = 17
         '
         'moisBox
         '
-        Me.moisBox.Location = New System.Drawing.Point(668, 215)
-        Me.moisBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.moisBox.Location = New System.Drawing.Point(573, 175)
         Me.moisBox.Name = "moisBox"
-        Me.moisBox.Size = New System.Drawing.Size(180, 24)
+        Me.moisBox.Size = New System.Drawing.Size(154, 20)
         Me.moisBox.TabIndex = 18
         '
         'btnAdd
         '
         Me.btnAdd.BackColor = System.Drawing.Color.LightSkyBlue
         Me.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnAdd.Location = New System.Drawing.Point(331, 362)
-        Me.btnAdd.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btnAdd.Location = New System.Drawing.Point(284, 294)
         Me.btnAdd.Name = "btnAdd"
-        Me.btnAdd.Size = New System.Drawing.Size(227, 47)
+        Me.btnAdd.Size = New System.Drawing.Size(195, 38)
         Me.btnAdd.TabIndex = 19
         Me.btnAdd.Text = "Add User"
         Me.btnAdd.UseVisualStyleBackColor = False
@@ -230,10 +222,10 @@ Partial Class addUserForm
         '
         'addUserForm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(903, 554)
+        Me.ClientSize = New System.Drawing.Size(774, 450)
         Me.Controls.Add(Me.btnAdd)
         Me.Controls.Add(Me.moisBox)
         Me.Controls.Add(Me.dateBox)
@@ -252,7 +244,6 @@ Partial Class addUserForm
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.nomBox)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Name = "addUserForm"
         Me.Text = "addUserForm"
         CType(Me.moisBox, System.ComponentModel.ISupportInitialize).EndInit()

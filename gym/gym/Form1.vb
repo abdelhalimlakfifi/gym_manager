@@ -2,6 +2,7 @@
 Imports System.Data
 
 Public Class Form1
+    'Public adname As addUserForm
     Dim connections As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\alakf\Desktop\gym2\DATABASE\gymdata.accdb")
 
     Private Sub Login_Click(sender As Object, e As EventArgs) Handles Login.Click
@@ -17,6 +18,7 @@ Public Class Form1
             cmd.Parameters.AddWithValue("@2", OleDbType.VarChar).Value = TextBox2.Text
             Dim count As Integer = Convert.ToInt32(cmd.ExecuteScalar())
             If (count > 0) Then
+                addUserForm.adminame = TextBox1.Text
                 Form2.Show()
             Else
                 MsgBox("didn't Work")
@@ -40,7 +42,7 @@ Public Class Form1
         End If
     End Sub
 
-    
+
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
