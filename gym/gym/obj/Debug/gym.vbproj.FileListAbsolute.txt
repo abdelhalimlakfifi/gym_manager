@@ -171,3 +171,20 @@ C:\Users\ANDROID12-54\Desktop\partage\New folder\gym_manager\gym\gym\obj\Debug\g
 C:\Users\ANDROID12-54\Desktop\partage\New folder\gym_manager\gym\gym\obj\Debug\gym.Resources.resources
 C:\Users\ANDROID12-54\Desktop\partage\New folder\gym_manager\gym\gym\obj\Debug\gym.Validation.resources
 C:\Users\ANDROID12-54\Desktop\partage\New folder\gym_manager\gym\gym\obj\Debug\gym.vbproj.GenerateResource.Cache
+C:\Users\alakf\Desktop\Fgym\gym\gym\bin\Debug\gym.exe.config
+C:\Users\alakf\Desktop\Fgym\gym\gym\obj\Debug\gym.exe
+C:\Users\alakf\Desktop\Fgym\gym\gym\obj\Debug\gym.xml
+C:\Users\alakf\Desktop\Fgym\gym\gym\obj\Debug\gym.pdb
+C:\Users\alakf\Desktop\Fgym\gym\gym\bin\Debug\gym.exe
+C:\Users\alakf\Desktop\Fgym\gym\gym\bin\Debug\gym.pdb
+C:\Users\alakf\Desktop\Fgym\gym\gym\bin\Debug\gym.xml
+C:\Users\alakf\Desktop\Fgym\gym\gym\obj\Debug\gym.aboutUsForm.resources
+C:\Users\alakf\Desktop\Fgym\gym\gym\obj\Debug\gym.addUserForm.resources
+C:\Users\alakf\Desktop\Fgym\gym\gym\obj\Debug\gym.AdminForm.resources
+C:\Users\alakf\Desktop\Fgym\gym\gym\obj\Debug\gym.Blacklist.resources
+C:\Users\alakf\Desktop\Fgym\gym\gym\obj\Debug\gym.Form1.resources
+C:\Users\alakf\Desktop\Fgym\gym\gym\obj\Debug\gym.Form2.resources
+C:\Users\alakf\Desktop\Fgym\gym\gym\obj\Debug\gym.home.resources
+C:\Users\alakf\Desktop\Fgym\gym\gym\obj\Debug\gym.Resources.resources
+C:\Users\alakf\Desktop\Fgym\gym\gym\obj\Debug\gym.Validation.resources
+C:\Users\alakf\Desktop\Fgym\gym\gym\obj\Debug\gym.vbproj.GenerateResource.Cache

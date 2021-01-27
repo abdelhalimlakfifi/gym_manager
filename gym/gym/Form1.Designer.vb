@@ -44,20 +44,18 @@ Partial Class Form1
         Me.Panel1.Controls.Add(Me.Login)
         Me.Panel1.Controls.Add(Me.TextBox2)
         Me.Panel1.Controls.Add(Me.TextBox1)
-        Me.Panel1.Location = New System.Drawing.Point(474, 62)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Panel1.Location = New System.Drawing.Point(406, 50)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(346, 470)
+        Me.Panel1.Size = New System.Drawing.Size(297, 382)
         Me.Panel1.TabIndex = 0
         '
         'CheckBox1
         '
         Me.CheckBox1.AutoSize = True
         Me.CheckBox1.ForeColor = System.Drawing.Color.Silver
-        Me.CheckBox1.Location = New System.Drawing.Point(73, 245)
-        Me.CheckBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.CheckBox1.Location = New System.Drawing.Point(63, 199)
         Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(126, 21)
+        Me.CheckBox1.Size = New System.Drawing.Size(102, 17)
         Me.CheckBox1.TabIndex = 6
         Me.CheckBox1.Text = "Show Password"
         Me.CheckBox1.UseVisualStyleBackColor = True
@@ -71,10 +69,9 @@ Partial Class Form1
         Me.Login.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Login.Font = New System.Drawing.Font("Tahoma", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Login.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Login.Location = New System.Drawing.Point(64, 279)
-        Me.Login.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Login.Location = New System.Drawing.Point(55, 227)
         Me.Login.Name = "Login"
-        Me.Login.Size = New System.Drawing.Size(227, 47)
+        Me.Login.Size = New System.Drawing.Size(195, 38)
         Me.Login.TabIndex = 3
         Me.Login.Text = "Login"
         Me.Login.UseVisualStyleBackColor = False
@@ -86,11 +83,10 @@ Partial Class Form1
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.TextBox2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.TextBox2.Location = New System.Drawing.Point(63, 191)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.TextBox2.Location = New System.Drawing.Point(54, 155)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.TextBox2.Size = New System.Drawing.Size(228, 24)
+        Me.TextBox2.Size = New System.Drawing.Size(196, 20)
         Me.TextBox2.TabIndex = 2
         Me.TextBox2.Text = "PASSWORD"
         Me.TextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -102,10 +98,9 @@ Partial Class Form1
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.TextBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.TextBox1.Location = New System.Drawing.Point(64, 146)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.TextBox1.Location = New System.Drawing.Point(55, 119)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(228, 24)
+        Me.TextBox1.Size = New System.Drawing.Size(196, 20)
         Me.TextBox1.TabIndex = 0
         Me.TextBox1.Text = "USERNAME"
         Me.TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -116,10 +111,9 @@ Partial Class Form1
         Me.Panel2.Controls.Add(Me.Label2)
         Me.Panel2.Controls.Add(Me.Label1)
         Me.Panel2.Controls.Add(Me.PictureBox1)
-        Me.Panel2.Location = New System.Drawing.Point(107, 62)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Panel2.Location = New System.Drawing.Point(92, 50)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(370, 470)
+        Me.Panel2.Size = New System.Drawing.Size(317, 382)
         Me.Panel2.TabIndex = 4
         '
         'Label2
@@ -127,9 +121,9 @@ Partial Class Form1
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Segoe UI Emoji", 11.0!)
         Me.Label2.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label2.Location = New System.Drawing.Point(300, 188)
+        Me.Label2.Location = New System.Drawing.Point(257, 153)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(53, 26)
+        Me.Label2.Size = New System.Drawing.Size(40, 20)
         Me.Label2.TabIndex = 4
         Me.Label2.Text = "GYM"
         '
@@ -138,37 +132,36 @@ Partial Class Form1
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI Semilight", 35.0!)
         Me.Label1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label1.Location = New System.Drawing.Point(185, 188)
+        Me.Label1.Location = New System.Drawing.Point(159, 153)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(141, 78)
+        Me.Label1.Size = New System.Drawing.Size(113, 62)
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "BHZ"
         '
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(19, 123)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.PictureBox1.Location = New System.Drawing.Point(16, 100)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(182, 172)
+        Me.PictureBox1.Size = New System.Drawing.Size(156, 140)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 5
         Me.PictureBox1.TabStop = False
         '
         'Form1
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(19, Byte), Integer), CType(CType(77, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(894, 583)
+        Me.ClientSize = New System.Drawing.Size(766, 474)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
-        Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Form1"
+        Me.Text = "BHZ - Sign in"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.Panel2.ResumeLayout(False)
