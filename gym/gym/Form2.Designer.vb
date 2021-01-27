@@ -67,13 +67,13 @@ Partial Class Form2
         '
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button2.Font = New System.Drawing.Font("Tahoma", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Button2.ForeColor = System.Drawing.Color.Snow
         Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
         Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button2.Location = New System.Drawing.Point(134, 587)
+        Me.Button2.Location = New System.Drawing.Point(134, 566)
         Me.Button2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(111, 29)
+        Me.Button2.Size = New System.Drawing.Size(111, 39)
         Me.Button2.TabIndex = 22
         Me.Button2.Text = "LogOut"
         Me.Button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -222,7 +222,7 @@ Partial Class Form2
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label4.Location = New System.Drawing.Point(143, 2)
+        Me.Label4.Location = New System.Drawing.Point(174, 2)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(432, 69)
         Me.Label4.TabIndex = 10
